@@ -1,3 +1,9 @@
+
+using BsLayer.maaper;
+using BsLayer.Services;
+using DTLayer.Services;
+using RepLayer.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +13,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.ConfigureDatabase(builder.Configuration);
+builder.Services.AddAutoMapper(typeof(PeopleProfile).Assembly);
+builder.Services.addBussinesServices();
+builder.Services.AddRepoServices();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
