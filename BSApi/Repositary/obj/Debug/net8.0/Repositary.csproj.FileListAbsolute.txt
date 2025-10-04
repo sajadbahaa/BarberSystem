@@ -1,0 +1,16 @@
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\bin\Debug\net8.0\Repositary.deps.json
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\bin\Debug\net8.0\Repositary.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\bin\Debug\net8.0\Repositary.pdb
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Debug\net8.0\Repositary.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Debug\net8.0\Repositary.AssemblyInfoInputs.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Debug\net8.0\Repositary.AssemblyInfo.cs
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Debug\net8.0\Repositary.csproj.CoreCompileInputs.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Debug\net8.0\Repositary.sourcelink.json
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Debug\net8.0\Repositary.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Debug\net8.0\refint\Repositary.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Debug\net8.0\Repositary.pdb
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Debug\net8.0\ref\Repositary.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Debug\net8.0\Repositary.csproj.AssemblyReference.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\bin\Debug\net8.0\DataLayer.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\bin\Debug\net8.0\DataLayer.pdb
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Debug\net8.0\Repositary.csproj.Up2Date
