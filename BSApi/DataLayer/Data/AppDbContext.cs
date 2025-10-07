@@ -31,6 +31,9 @@ namespace DTLayer.Data
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
         }
         public DbSet<People> People { get; set; }   
+        public DbSet<Speclitys> Speclitys { get; set; }
+        public DbSet<ServicesDetials> ServicesDetials { get; set; }
+        public DbSet<Servics> servics { get; set; }
 
     
 
