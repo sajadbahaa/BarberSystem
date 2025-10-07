@@ -1,4 +1,4 @@
-﻿namespace Dtos
+﻿namespace Dtos.PeopleDtos
 {
     public class FindPeopleDtos
     {

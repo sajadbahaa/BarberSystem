@@ -4,24 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dtos
+namespace Dtos.PeopleDtos
 {
-    public  class UpdatePeopleDtos
+    public  class AddPeopleDtos
     {
-        public int PersonID { get; set; }
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string LastName { get; set; }
         public string? Phone { get; set; }
         public string? Email { get; set; }
-        public UpdatePeopleDtos()
+        public bool Enabled { get; set; }
+        public AddPeopleDtos()
         {
-            PersonID = 0;
-            FirstName = string.Empty;
+                 FirstName = string.Empty;
             SecondName = string.Empty;
             LastName = string.Empty;
             Phone = null;
-            Email =  null;
+            Email = null;
         }
     }
 }
