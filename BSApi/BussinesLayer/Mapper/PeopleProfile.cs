@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using DataLayer.Entities;
-using Dtos;
+using Dtos.PeopleDtos;
 
 
 

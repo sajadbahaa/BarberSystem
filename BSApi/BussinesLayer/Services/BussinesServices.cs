@@ -1,5 +1,6 @@
 ﻿using BsLayer.maaper;
 using BussinesLayer;
+using DataLayer.Entities;
 using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.Extensions.DependencyInjection;
 using RepLayer;
@@ -18,6 +19,9 @@ namespace BsLayer.Services
         {
             //services.AddScoped<TransactionService>();
             services.AddScoped<PeopleService>();
+            services.AddScoped<ServicesDetilasService>();
+            services.AddScoped<SpeclistService>();
+            //services.AddScoped<PeopleService>();
 
 
             return services;
