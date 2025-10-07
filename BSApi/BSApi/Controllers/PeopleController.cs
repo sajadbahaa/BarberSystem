@@ -1,5 +1,5 @@
 using BussinesLayer;
-using Dtos;
+using Dtos.PeopleDtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BSApi.Controllers
