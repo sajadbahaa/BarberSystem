@@ -8,11 +8,15 @@ using System.Threading.Tasks;
 
 namespace RepLayer.Services
 {
-    static  public  class ServicesReop
+    static  public  class Services
     {
         static public IServiceCollection AddRepoServices(this IServiceCollection services) 
         {
             services.AddScoped<PeopleRepo>();
+            services.AddScoped<SpeclitsRepo>();
+            services.AddScoped<ServicsRepo>();
+            services.AddScoped<ServiceDetilasRepo>();
+
             //services.AddScoped<SpecilizeRepo>();
             //services.AddScoped<CourseRepo>();
             //services.AddScoped<PeopleRepo>();

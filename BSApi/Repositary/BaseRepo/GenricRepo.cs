@@ -16,10 +16,14 @@ namespace Repositary.BaseRepo
         Task<Tkey>AddCustomAsync(T entity);
         Task AddAsync(T entity);
 
-        Task AddRangeAsync(List<T> entities);
+        Task<List<Tkey>?> AddRangeAsync(List<T> entities);
+        Task<bool> AddRangeSingleAsync(List<T> entities);
         Task<bool> UpdateAsync(T entity);
         Task<bool> DeleteAsync(Tkey id);
         Task<int> SaveAsync();
+        Task<bool> IsExistAsync(string tkey);
+        Task<bool> IsExistAsync(List<string> tkey);
+        Task<bool> ActivateAsync(Tkey id);
     }
 
 }

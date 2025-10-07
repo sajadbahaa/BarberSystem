@@ -57,7 +57,7 @@ namespace Repositary
         }
 
 
-        public async Task<bool> ActivateAsync(int id)
+        public override async Task<bool> ActivateAsync(int id)
         {
             var res = await _dbSet.Where(x=>x.PersonID==id).ExecuteUpdateAsync
                 (x => x.SetProperty(i => i.Enabled, true));

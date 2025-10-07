@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Repositary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7656119b62d18385b1dd21641bbc3bc9d8a3b9df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f92c4b0618ea966b23696b87ab6e1840cc7aa071")]
 [assembly: System.Reflection.AssemblyProductAttribute("Repositary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Repositary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
