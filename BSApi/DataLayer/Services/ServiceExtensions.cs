@@ -1,4 +1,7 @@
-﻿using DTLayer.Data;
+﻿using DataLayer.Entities;
+using DTLayer.Data;
+using Microsoft.AspNetCore.Identity;
+
 //using DTLayer.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -18,13 +21,39 @@ namespace DTLayer.Services
             // قراءة الـ Connection String من appsettings.json
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
-            //if (string.IsNullOrEmpty(connectionString))
-            //{
-            //    throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-            //}
-            // إضافة AppDbContext
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(connectionString));
+
+
+
+            services.AddDataProtection();                     // ✅ لحل IDataProtectionProvider
+            services.AddSingleton<TimeProvider>(TimeProvider.System); // ✅ لحل TimeProvider
+
+
+
+            // ✅ تسجيل كامل لخدمات الهوية
+            services.AddIdentity<AppUser, IdentityRole<int>>(options =>
+            {
+                options.User.RequireUniqueEmail = true;
+                options.Password.RequireDigit = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequiredLength = 6;
+            })
+        //الأول: يخبر Identity وين يخزن كل شيء في DB.
+
+          .AddEntityFrameworkStores<AppDbContext>()
+
+//الثاني: يخلي Identity قادر يولد Tokens لأي عملية تتعلق بالمصادقة والأمان.
+.AddDefaultTokenProviders();
+
+            //services.AddAuthentication(options =>
+            //{
+            //    options.DefaultAuthenticateScheme = IdentityConstants.ApplicationScheme;
+            //    options.DefaultChallengeScheme = IdentityConstants.ApplicationScheme;
+            //    options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+            //});
 
             return services;
         }

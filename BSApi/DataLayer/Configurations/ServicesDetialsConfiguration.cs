@@ -11,9 +11,16 @@ namespace DataLayer.Configurations
         {
             builder.HasKey(x => x.ServiceDetilasID);
             builder.HasOne(x => x.Speclitys)
-                .WithMany(x => x.ServicesDetials).HasForeignKey(x => x.SpecilityID);
+                .WithMany(x => x.ServicesDetials)
+                .HasForeignKey(x => x.SpecilityID)
+                .HasConstraintName("FK_ServicesDetials_Speclitys_SpecilityID");
+
             builder.HasOne(x => x.servics).WithOne(x => x.servicesDetials)
                 .HasForeignKey<ServicesDetials>(x => x.ServiceID);
+        
+        
+
         }
+        //FK_ServicesDetials_Speclitys_SpecilityID
     }
 }

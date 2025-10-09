@@ -14,7 +14,7 @@ namespace DataLayer.Entities
         public string SecondName { get; set; }
         public string LastName { get; set; }
         public string ? Phone { get; set; }
-        public string ? Email { get; set; }
+        //public string ? Email { get; set; }
         public bool Enabled { get; set; }
         public People()
         {
@@ -23,7 +23,7 @@ namespace DataLayer.Entities
             LastName = string.Empty;
             SecondName = string.Empty;
             Phone = null ;
-            Email = null ;
+            //Email = null ;
             Enabled = true;
         }
     }

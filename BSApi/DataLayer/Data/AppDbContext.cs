@@ -1,12 +1,24 @@
 ﻿//using DTLayer.Entities;
+using DataLayer.Configurations;
 using DataLayer.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 
 namespace DTLayer.Data
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext: IdentityDbContext<
+        AppUser,        // User
+        IdentityRole<int>,
+        int,            // Key Type
+        IdentityUserClaim<int>,      // UserClaim
+        IdentityUserRole<int>,       // UserRole
+        IdentityUserLogin<int>,      // UserLogin
+        IdentityRoleClaim<int>,      // RoleClaim
+        IdentityUserToken<int>>
+
     {
         public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options)
@@ -29,6 +41,9 @@ namespace DTLayer.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+
+            modelBuilder.ApplyConfiguration(new AppUserConfiguration());
+
         }
         public DbSet<People> People { get; set; }   
         public DbSet<Speclitys> Speclitys { get; set; }
