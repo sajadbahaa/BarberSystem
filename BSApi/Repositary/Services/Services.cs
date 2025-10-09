@@ -16,6 +16,9 @@ namespace RepLayer.Services
             services.AddScoped<SpeclitsRepo>();
             services.AddScoped<ServicsRepo>();
             services.AddScoped<ServiceDetilasRepo>();
+            services.AddScoped<UserRepo>();
+            //services.AddScoped<RolesRepo>();
+
 
             //services.AddScoped<SpecilizeRepo>();
             //services.AddScoped<CourseRepo>();

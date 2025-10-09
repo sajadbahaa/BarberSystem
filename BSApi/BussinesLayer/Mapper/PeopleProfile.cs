@@ -17,8 +17,7 @@ namespace BsLayer.maaper
 .ForMember(x => x.PersonID, opt => opt.MapFrom(x => x.PersonID))
     .ForMember(dest => dest.Phone,
                        opt => opt.MapFrom(src => src.Phone ?? string.Empty))
-            .ForMember(dest => dest.Email,
-                       opt => opt.MapFrom(src => src.Email ?? string.Empty))
+            
             ;
 
 
@@ -26,8 +25,7 @@ namespace BsLayer.maaper
            
     .ForMember(dest => dest.Phone,
                        opt => opt.MapFrom(src => string.IsNullOrEmpty(src.Phone) ? null : src.Phone))
-            .ForMember(dest => dest.Email,
-                       opt => opt.MapFrom(src => string.IsNullOrEmpty(src.Email) ? null : src.Email))
+
             .ForMember(dest => dest.Enabled, opt => opt.Ignore());
             ;
 
@@ -37,9 +35,8 @@ namespace BsLayer.maaper
            .ForMember(x => x.PersonID, opt => opt.MapFrom(x=>x.PersonID))
     .ForMember(dest => dest.Phone,
                        opt => opt.MapFrom(src => string.IsNullOrEmpty(src.Phone) ? null : src.Phone))
-            .ForMember(dest => dest.Email,
-                       opt => opt.MapFrom(src => string.IsNullOrEmpty(src.Email) ? null : src.Email))
-                        ;
+                        
+            ;
 
 
 

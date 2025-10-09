@@ -20,7 +20,8 @@ namespace BsLayer.Services
             //services.AddScoped<TransactionService>();
             services.AddScoped<PeopleService>();
             services.AddScoped<ServicesDetilasService>();
-            services.AddScoped<SpeclistService>();
+            services.AddScoped<SpeclistServices>();
+            services.AddScoped<AppUserService>();
             //services.AddScoped<PeopleService>();
 
 

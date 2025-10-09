@@ -21,10 +21,7 @@ namespace Repositary
             return await _dbSet.AsNoTracking().FirstOrDefaultAsync(x=>x.Phone==phone);
         }
 
-        public async Task<People?> GetByEmaliAsync(string email)
-        {
-            return await _dbSet.AsNoTracking().FirstOrDefaultAsync(x => x.Email == email);
-        }
+        
 
         public async Task<People?> GetByNameAsync(string firstName,string secondName,string lastName)
         {
@@ -34,7 +31,7 @@ namespace Repositary
 
         public override async Task<bool> UpdateAsync(People entity)
         {
-            if (await _PhoneOrEmailExist(entity.PersonID,entity.Phone,entity.Email))
+            if (await _PhoneExist(entity.PersonID,entity.Phone))
             {
                 return false;
             }
@@ -44,7 +41,6 @@ namespace Repositary
                 .SetProperty(i=>i.SecondName,entity.SecondName)
                 .SetProperty(i => i.LastName, entity.LastName)
 .SetProperty(i => i.Phone, entity.Phone)
-.SetProperty(i => i.Email,entity.Email)
 
                 );
             return res > 0;
@@ -69,24 +65,23 @@ namespace Repositary
             return await _context.SaveChangesAsync()>0?entity.PersonID:0;
         }
 
-        public async Task<bool> PhoneOrEmailExist(string Phone,string Email)
+        public async Task<bool> PhoneExist(string Phone)
         {
              return await _dbSet.AsNoTracking()
                 .AnyAsync(x =>
 
-                (!string.IsNullOrEmpty(Email) && x.Email== Email) ||
+                
                     (!string.IsNullOrEmpty(Phone) && x.Phone == Phone)
                 );
         }
 
 
-        private async Task<bool> _PhoneOrEmailExist(int ID,string Phone, string Email)
+        private async Task<bool> _PhoneExist(int ID,string Phone)
         {
             return await _dbSet.AsNoTracking()
      .AnyAsync(x =>
          x.PersonID != ID &&
          (
-             (!string.IsNullOrEmpty(Email) && x.Email == Email) ||
              (!string.IsNullOrEmpty(Phone) && x.Phone == Phone)
          )
      );

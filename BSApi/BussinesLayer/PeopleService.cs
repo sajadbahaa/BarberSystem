@@ -26,10 +26,10 @@ namespace BussinesLayer
             return _mapper.Map<FindPeopleDtos>(await _repo.GetByNameAsync(firstName,secondName,LastName));
         }
 
-        public async Task<FindPeopleDtos?> FindByEmailAsync(string Email)
-        {
-            return _mapper.Map<FindPeopleDtos>(await _repo.GetByEmaliAsync(Email));
-        }
+        //public async Task<FindPeopleDtos?> FindByEmailAsync(string Email)
+        //{
+        //    return _mapper.Map<FindPeopleDtos>(await _repo.GetByEmaliAsync(Email));
+        //}
         public async Task<FindPeopleDtos?> FindByPhoneAsync(string Phone)
         {
             return _mapper.Map<FindPeopleDtos>(await _repo.GetByPhoneAsync(Phone));
@@ -47,7 +47,7 @@ namespace BussinesLayer
 
         public async Task<int> AddAsync(AddPeopleDtos dto) 
         {
-            if (await _repo.PhoneOrEmailExist(dto.Phone, dto.Email))
+            if (await _repo.PhoneExist(dto.Phone))
                 return 0;
 
             var person = _mapper.Map<People>(dto);

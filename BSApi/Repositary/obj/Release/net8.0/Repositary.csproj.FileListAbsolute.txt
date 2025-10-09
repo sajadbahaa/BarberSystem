@@ -1,0 +1,6 @@
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Release\net8.0\Repositary.csproj.AssemblyReference.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Release\net8.0\Repositary.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Release\net8.0\Repositary.AssemblyInfoInputs.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Release\net8.0\Repositary.AssemblyInfo.cs
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Release\net8.0\Repositary.csproj.CoreCompileInputs.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Repositary\obj\Release\net8.0\Repositary.sourcelink.json

@@ -1,0 +1,8 @@
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Release\net8.0\BSApi.csproj.AssemblyReference.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Release\net8.0\rpswa.dswa.cache.json
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Release\net8.0\BSApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Release\net8.0\BSApi.AssemblyInfoInputs.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Release\net8.0\BSApi.AssemblyInfo.cs
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Release\net8.0\BSApi.csproj.CoreCompileInputs.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Release\net8.0\BSApi.MvcApplicationPartsAssemblyInfo.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Release\net8.0\BSApi.sourcelink.json

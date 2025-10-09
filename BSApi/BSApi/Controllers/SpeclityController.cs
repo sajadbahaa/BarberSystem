@@ -9,9 +9,9 @@ namespace BSApi.Controllers
     [Route("[controller]")]
     public class SpeclitController : ControllerBase
     {
-        private readonly SpeclistService _service;
+        private readonly SpeclistServices _service;
 
-        public SpeclitController(SpeclistService service)
+        public SpeclitController(SpeclistServices service)
         {
             _service = service;
         }

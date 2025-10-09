@@ -13,7 +13,7 @@ namespace Dtos.PeopleDtos
         public string SecondName { get; set; }
         public string LastName { get; set; }
         public string? Phone { get; set; }
-        public string? Email { get; set; }
+        //public string? Email { get; set; }
         public UpdatePeopleDtos()
         {
             PersonID = 0;
@@ -21,7 +21,7 @@ namespace Dtos.PeopleDtos
             SecondName = string.Empty;
             LastName = string.Empty;
             Phone = null;
-            Email =  null;
+            //Email =  null;
         }
     }
 }

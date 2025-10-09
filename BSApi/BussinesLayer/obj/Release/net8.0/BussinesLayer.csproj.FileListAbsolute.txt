@@ -1,0 +1,6 @@
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Release\net8.0\BussinesLayer.csproj.AssemblyReference.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Release\net8.0\BussinesLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Release\net8.0\BussinesLayer.AssemblyInfoInputs.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Release\net8.0\BussinesLayer.AssemblyInfo.cs
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Release\net8.0\BussinesLayer.csproj.CoreCompileInputs.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Release\net8.0\BussinesLayer.sourcelink.json

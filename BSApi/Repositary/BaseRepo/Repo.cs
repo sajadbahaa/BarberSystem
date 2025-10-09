@@ -1,5 +1,6 @@
 ﻿using BsLayer.misc;
 using DTLayer.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
@@ -54,6 +55,11 @@ namespace Repositary.BaseRepo
             return await _dbSet.AsNoTracking().ToListAsync();
         }
 
+        public async Task<List<T>> GetAllUsersAsync()
+        {
+            return await _dbSet.AsNoTracking().ToListAsync();
+        }
+
         public async Task AddAsync(T entity)
         {
             await _dbSet.AddAsync(entity);
@@ -104,6 +110,11 @@ namespace Repositary.BaseRepo
         }
 
         public virtual Task<bool> IsExistAsync(List<string> tkey)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual Task<T?> GetByUsernameAsync(string id)
         {
             throw new NotImplementedException();
         }

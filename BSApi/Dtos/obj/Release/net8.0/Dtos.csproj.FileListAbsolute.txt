@@ -1,0 +1,12 @@
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Dtos\bin\Release\net8.0\Dtos.deps.json
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Dtos\bin\Release\net8.0\Dtos.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Dtos\bin\Release\net8.0\Dtos.pdb
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Dtos\obj\Release\net8.0\Dtos.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Dtos\obj\Release\net8.0\Dtos.AssemblyInfoInputs.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Dtos\obj\Release\net8.0\Dtos.AssemblyInfo.cs
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Dtos\obj\Release\net8.0\Dtos.csproj.CoreCompileInputs.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Dtos\obj\Release\net8.0\Dtos.sourcelink.json
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Dtos\obj\Release\net8.0\Dtos.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Dtos\obj\Release\net8.0\refint\Dtos.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Dtos\obj\Release\net8.0\Dtos.pdb
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\Dtos\obj\Release\net8.0\ref\Dtos.dll

@@ -13,6 +13,8 @@ namespace Repositary.BaseRepo
         Task<List<T>> GetAllFilterAsync();
         Task<List<T>> GetAllAsync();
         Task<T?> GetByIdAsync(Tkey id);
+        Task<T?> GetByUsernameAsync(string id);
+
         Task<Tkey>AddCustomAsync(T entity);
         Task AddAsync(T entity);
 

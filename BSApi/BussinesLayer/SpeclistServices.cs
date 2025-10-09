@@ -15,14 +15,14 @@ using System.Threading.Tasks;
 
 namespace BussinesLayer
 {
-    public  class SpeclistService
+    public  class SpeclistServices
     {
         readonly SpeclitsRepo _repo;
         readonly ServicsRepo  _servicsRepo;
         readonly ServiceDetilasRepo _serviceDetilasRepo;
         
         readonly IMapper _mapper;
-        public SpeclistService(SpeclitsRepo repo, IMapper mapper, ServicsRepo servicsRepo, ServiceDetilasRepo serviceDetilasRepo)
+        public SpeclistServices(SpeclitsRepo repo, IMapper mapper, ServicsRepo servicsRepo, ServiceDetilasRepo serviceDetilasRepo)
         {
             _repo = repo;
             _mapper = mapper;

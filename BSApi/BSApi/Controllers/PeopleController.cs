@@ -37,15 +37,15 @@ namespace BSApi.Controllers
             return Ok(person);
         }
 
-        [HttpGet("[action]")]
-        public async Task<IActionResult> FindByEmailAsync(string email)
-        {
-            var person = await _service.FindByEmailAsync(email);
-            if (person == null)
-                return NotFound($"No person found with email: {email}");
+        //[HttpGet("[action]")]
+        //public async Task<IActionResult> FindByEmailAsync(string email)
+        //{
+        //    var person = await _service.FindByEmailAsync(email);
+        //    if (person == null)
+        //        return NotFound($"No person found with email: {email}");
 
-            return Ok(person);
-        }
+        //    return Ok(person);
+        //}
 
         [HttpGet("[action]")]
         public async Task<IActionResult> FindByPhoneAsync(string phone)
