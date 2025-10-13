@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace Repositary.BaseRepo
 {
     public abstract class Repo<T, TKey> : IRepository<T, TKey>, ITransactionService where T : class
@@ -23,7 +25,12 @@ namespace Repositary.BaseRepo
         }
         public virtual Task<TKey> AddCustomAsync(T entity) => throw new NotImplementedException();
         public virtual  Task<List<TKey>?> AddRangeAsync(List<T> entities) => throw new NotImplementedException();
-        public virtual Task<bool> AddRangeSingleAsync(List<T> entities) => throw new NotImplementedException();
+        public virtual async Task<bool> AddRangeCustomAsync(List<T> entities)
+        {
+            await _context.AddRangeAsync(entities);
+
+            return await _context.SaveChangesAsync() > 0;
+        }
 
         public virtual async Task<List<T>> GetAllFilterAsync()
         {
@@ -38,9 +45,9 @@ namespace Repositary.BaseRepo
         }
 
 
-        public async Task<int> SaveAsync()
+        public async Task<bool> SaveAsync()
         {
-            return await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync()>0;
         }
 
         public virtual async Task<T?> GetByIdAsync(TKey id)
@@ -118,5 +125,18 @@ namespace Repositary.BaseRepo
         {
             throw new NotImplementedException();
         }
+
+        public  virtual Task<bool> UpdateRangeAsync(List<T> entities)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual Task<bool> DeleteRangeAsync(List<TKey> entities)
+        {
+            throw new NotImplementedException();
+
+        }
+
+
     }
 }

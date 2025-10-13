@@ -16,7 +16,7 @@ namespace Repositary
         {
         }
 
-        public override async Task<bool> AddRangeSingleAsync(List<ServicesDetials> entities)
+        public override async Task<bool> AddRangeCustomAsync(List<ServicesDetials> entities)
         {
             await _context.AddRangeAsync(entities);
 
