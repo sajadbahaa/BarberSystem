@@ -72,7 +72,7 @@ namespace BussinesLayer
 
             // link speclize with Services.
            var entitys = _mapper.Map<List<ServicesDetials>>(ServicesIDs.Select(x => new ServicesDetials {ServiceID = x,SpecilityID=specilstID}).ToList());
-           bool result =  await _serviceDetilasRepo.AddRangeSingleAsync(entitys);
+           bool result =  await _serviceDetilasRepo.AddRangeCustomAsync(entitys);
             if (!result) { await _repo.RollbackAsync(); return false; }
             await _repo.CommitAsync();
             return true;
@@ -104,7 +104,7 @@ namespace BussinesLayer
 
             var entitys = _mapper.Map<List<ServicesDetials>>(ServicesIDs.Select(x => new ServicesDetials { ServiceID = x, SpecilityID = dto.SpeclizeID }).ToList());
             
-            bool result = await _serviceDetilasRepo.AddRangeSingleAsync(entitys);
+            bool result = await _serviceDetilasRepo.AddRangeCustomAsync(entitys);
             if (!result) { await _repo.RollbackAsync(); return false; }
             await _repo.CommitAsync();
             return true;
