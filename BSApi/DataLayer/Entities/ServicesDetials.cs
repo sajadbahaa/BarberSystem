@@ -14,6 +14,8 @@ namespace DataLayer.Entities
         public short ServiceID { get; set; }
         public Servics servics { get; set; } 
         public Speclitys Speclitys { get; set; }
+
+        public ICollection<TempBarberServices>? TempBarberServices { get; set; } = new List<TempBarberServices>();
         public ServicesDetials()
         {
             ServiceDetilasID = 0;   

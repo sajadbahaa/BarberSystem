@@ -14,9 +14,13 @@ namespace DataLayer.Entities
         public DateTime CreateAt { get; set; }
         public DateTime UpdateAt { get; set; }
         public bool IsActive { get; set;}
-        
+
+        public ICollection<BarberApplications> ? barberApplications { get; set; } = new List<BarberApplications>();
+        public ICollection<ApplicationsHistory>? applicationsHistories { get; set; } = new List<ApplicationsHistory>();
+
         public AppUser()
         {
+
             IsActive = true;
             PasswordHash = null;
             CreateAt = DateTime.Now;

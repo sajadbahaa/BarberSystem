@@ -16,6 +16,8 @@ namespace DataLayer.Entities
         public string ? Phone { get; set; }
         //public string ? Email { get; set; }
         public bool Enabled { get; set; }
+
+        public BarberApplications ? BarberApplications { get; set; }
         public People()
         {
             PersonID = 0;

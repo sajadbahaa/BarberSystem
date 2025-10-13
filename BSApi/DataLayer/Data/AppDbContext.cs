@@ -49,8 +49,9 @@ namespace DTLayer.Data
         public DbSet<Speclitys> Speclitys { get; set; }
         public DbSet<ServicesDetials> ServicesDetials { get; set; }
         public DbSet<Servics> servics { get; set; }
-
-    
+        public DbSet<BarberApplications> BarberApplications { get; set; }
+        public DbSet<TempBarberServices> TempBarberServices { get; set; }
+        public DbSet<ApplicationsHistory> applicationsHistory { get; set; }
 
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataLayer.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251009131939_Re Build App")]
-    partial class ReBuildApp
+    [Migration("20251010204317_get init")]
+    partial class getinit
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,8 +38,7 @@ namespace DataLayer.Migrations
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .IsRequired()
-                        .HasMaxLength(30)
+                        .HasMaxLength(256)
                         .HasColumnType("varchar");
 
                     b.Property<DateTime>("CreateAt")
@@ -65,19 +64,18 @@ namespace DataLayer.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<string>("NormalizedEmail")
-                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("varchar");
 
                     b.Property<string>("NormalizedUserName")
-                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("varchar");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("PasswordHash")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)")
+                        .HasColumnName("PasswordHash");
 
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
@@ -106,9 +104,79 @@ namespace DataLayer.Migrations
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()
-                        .HasDatabaseName("UserNameIndex");
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("DataLayer.Entities.BarberApplications", b =>
+                {
+                    b.Property<int>("ApplicationID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ApplicationID"));
+
+                    b.Property<string>("CopyFirstName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("Nvarchar");
+
+                    b.Property<string>("CopyLastName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("Nvarchar");
+
+                    b.Property<string>("CopyPhone")
+                        .HasMaxLength(12)
+                        .HasColumnType("varchar");
+
+                    b.Property<string>("CopySecondName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("Nvarchar");
+
+                    b.Property<DateOnly>("CreatAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("Date")
+                        .HasDefaultValue(new DateOnly(2025, 10, 10));
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("Nvarchar");
+
+                    b.Property<int?>("PersonID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Reason")
+                        .HasMaxLength(100)
+                        .HasColumnType("Nvarchar");
+
+                    b.Property<string>("Shop")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("Nvarchar");
+
+                    b.Property<byte>("Status")
+                        .HasColumnType("TINYINT");
+
+                    b.Property<DateOnly?>("UpdateAt")
+                        .HasColumnType("Date");
+
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ApplicationID");
+
+                    b.HasIndex("PersonID")
+                        .IsUnique()
+                        .HasFilter("[PersonID] IS NOT NULL");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("BarberApplications");
                 });
 
             modelBuilder.Entity("DataLayer.Entities.People", b =>
@@ -229,6 +297,37 @@ namespace DataLayer.Migrations
                     b.ToTable("Speclitys");
                 });
 
+            modelBuilder.Entity("DataLayer.Entities.TempBarberServices", b =>
+                {
+                    b.Property<int>("TempServiceID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TempServiceID"));
+
+                    b.Property<int>("ApplicationID")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("Duration")
+                        .HasColumnType("time");
+
+                    b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<short>("ServiceDetilasID")
+                        .HasColumnType("smallint");
+
+                    b.HasKey("TempServiceID");
+
+                    b.HasIndex("ServiceDetilasID");
+
+                    b.HasIndex("ApplicationID", "ServiceDetilasID")
+                        .IsUnique();
+
+                    b.ToTable("TempBarberServices");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<int>", b =>
                 {
                     b.Property<int>("Id")
@@ -239,7 +338,7 @@ namespace DataLayer.Migrations
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .HasMaxLength(100)
+                        .HasMaxLength(256)
                         .HasColumnType("varchar");
 
                     b.Property<string>("Name")
@@ -370,6 +469,23 @@ namespace DataLayer.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("DataLayer.Entities.BarberApplications", b =>
+                {
+                    b.HasOne("DataLayer.Entities.People", "person")
+                        .WithOne("BarberApplications")
+                        .HasForeignKey("DataLayer.Entities.BarberApplications", "PersonID");
+
+                    b.HasOne("DataLayer.Entities.AppUser", "user")
+                        .WithMany("barberApplications")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("person");
+
+                    b.Navigation("user");
+                });
+
             modelBuilder.Entity("DataLayer.Entities.ServicesDetials", b =>
                 {
                     b.HasOne("DataLayer.Entities.Servics", "servics")
@@ -388,6 +504,25 @@ namespace DataLayer.Migrations
                     b.Navigation("Speclitys");
 
                     b.Navigation("servics");
+                });
+
+            modelBuilder.Entity("DataLayer.Entities.TempBarberServices", b =>
+                {
+                    b.HasOne("DataLayer.Entities.BarberApplications", "barberApplication")
+                        .WithMany("TempBarberServices")
+                        .HasForeignKey("ApplicationID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DataLayer.Entities.ServicesDetials", "servicesDetials")
+                        .WithMany("TempBarberServices")
+                        .HasForeignKey("ServiceDetilasID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("barberApplication");
+
+                    b.Navigation("servicesDetials");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -439,6 +574,26 @@ namespace DataLayer.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("DataLayer.Entities.AppUser", b =>
+                {
+                    b.Navigation("barberApplications");
+                });
+
+            modelBuilder.Entity("DataLayer.Entities.BarberApplications", b =>
+                {
+                    b.Navigation("TempBarberServices");
+                });
+
+            modelBuilder.Entity("DataLayer.Entities.People", b =>
+                {
+                    b.Navigation("BarberApplications");
+                });
+
+            modelBuilder.Entity("DataLayer.Entities.ServicesDetials", b =>
+                {
+                    b.Navigation("TempBarberServices");
                 });
 
             modelBuilder.Entity("DataLayer.Entities.Servics", b =>
