@@ -7,6 +7,7 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles ="Admin")]
     public class AppUserController : ControllerBase
     {
         private readonly AppUserService _service;

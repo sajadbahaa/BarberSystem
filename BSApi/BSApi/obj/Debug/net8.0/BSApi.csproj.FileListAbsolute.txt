@@ -6,7 +6,6 @@ D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Debug\net8.0\BSAp
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Debug\net8.0\BSApi.csproj.CoreCompileInputs.cache
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Debug\net8.0\BSApi.MvcApplicationPartsAssemblyInfo.cache
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Debug\net8.0\BSApi.sourcelink.json
-D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Debug\net8.0\BSApi.MvcApplicationPartsAssemblyInfo.cs
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\bin\Debug\net8.0\appsettings.Development.json
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\bin\Debug\net8.0\BSApi.staticwebassets.endpoints.json
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\bin\Debug\net8.0\appsettings.json
@@ -183,6 +182,7 @@ D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\bin\Debug\net8.0\Buss
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\bin\Debug\net8.0\Dtos.pdb
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\bin\Debug\net8.0\DataLayer.pdb
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\bin\Debug\net8.0\Repositary.pdb
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Debug\net8.0\BSApi.MvcApplicationPartsAssemblyInfo.cs
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Debug\net8.0\rjimswa.dswa.cache.json
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
