@@ -32,7 +32,7 @@ namespace Repositary.BaseRepo
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public virtual async Task<List<T>> GetAllFilterAsync()
+        public virtual async Task<List<T>?> GetAllFilterAsync()
         {
             return await _dbSet.AsNoTracking().ToListAsync();
         }
@@ -86,7 +86,8 @@ namespace Repositary.BaseRepo
         {
             if (_transaction != null)
             {
-                await _context.SaveChangesAsync();   // يحفظ كل التغييرات
+                //await _context.SaveChangesAsync();  
+                // يحفظ كل التغييرات
                 await _transaction.CommitAsync();
                 await DisposeAsync(); // ينهي الـ transaction
             }
@@ -102,7 +103,7 @@ namespace Repositary.BaseRepo
         }
 
         public async ValueTask DisposeAsync()
-        {
+         {
             if (_transaction != null)
             {
                 await _transaction.DisposeAsync();

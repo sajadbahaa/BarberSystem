@@ -8,9 +8,16 @@ namespace Dtos.ApplicationsDtos
 {
     public  class addTempBarberServiceDtos
     {
-        public int ApplicationID { get; set; }
         public short ServiceDetilasID { get; set; }
         public decimal Price { get; set; }
+        
         public TimeSpan Duration { get; set; }
+    
+    public addTempBarberServiceDtos()
+        {
+            ServiceDetilasID = 0;
+            Price = 0;
+            Duration = TimeSpan.MinValue;
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace BSApi.Controllers
 
             return Ok(person);
         }
-
+        
         //[HttpGet("[action]")]
         //public async Task<IActionResult> FindByEmailAsync(string email)
         //{

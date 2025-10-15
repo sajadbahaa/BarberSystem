@@ -20,11 +20,10 @@ namespace DataLayer.Entities
 
         public TempBarberServices()
         {
-            TempServiceID = 0;
-            ApplicationID = 0;
-            ServiceDetilasID = 0;
+            //ApplicationID = 0;
+            //ServiceDetilasID = 0;
             Price = 0;
-            Duration = TimeSpan.Zero;
+            Duration = TimeSpan.FromMinutes(11);
         }
     }
 }

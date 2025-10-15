@@ -5,6 +5,7 @@ using Repositary.BaseRepo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -48,7 +49,7 @@ namespace Repositary
             return res > 0;
         }
 
-        public override async Task<List<Speclitys>> GetAllFilterAsync()
+        public override async Task<List<Speclitys>?> GetAllFilterAsync()
         {
             return await _dbSet.AsNoTracking().Where(x => x.Enabled).ToListAsync();
         }
@@ -56,7 +57,10 @@ namespace Repositary
         {
             return await _dbSet.AnyAsync(x => x.SpecilityName.Equals(specilistName));
         }
-
+        public async Task<List<string>?> GetAllSpeclityNamesAsync()
+        {
+            return await _dbSet.AsNoTracking().Where(x=>x.Enabled).Select(x => x.SpecilityName).ToListAsync();
+        }
 
     }
 }

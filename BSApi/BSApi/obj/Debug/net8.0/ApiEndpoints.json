@@ -184,6 +184,256 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "AddApplicationAsync",
+    "RelativePath": "api/BarberApplication/AddApplication/AddApplication",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.ApplicationsDtos.addApplicationDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "CancelApplicationByPendingBarberAsync",
+    "RelativePath": "api/BarberApplication/CancelApplicationByPendingBarber",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.ApplicationsDtos.RejectedOrCanceledApplicarionDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "GetAllApplicationsAsync",
+    "RelativePath": "api/BarberApplication/GetAllApplications/GetAllApplications",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dtos.ApplicationsDtos.findApplicationDtos, Dtos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "GetAllApplicationsHistotyAsync",
+    "RelativePath": "api/BarberApplication/GetAllApplicationsHistoty/GetAllApplicationsHistoty",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dtos.ApplicationsDtos.findApplicationHistotyDtos, Dtos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "GetAllTempPendingServicesAsync",
+    "RelativePath": "api/BarberApplication/GetAllTempPendingServices/GetAllTempPendingServices",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dtos.ApplicationsDtos.findTempBarberServiceGeneralDtos, Dtos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "GetApplicationInfoByIDAsync",
+    "RelativePath": "api/BarberApplication/GetApplicationInfoByID/GetApplicationInfoByID/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Dtos.ApplicationsDtos.findApplicationDtos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "GetApplicationsHistoryByHistoryIDAsync",
+    "RelativePath": "api/BarberApplication/GetApplicationsHistoryByHistoryID/GetApplicationsHistoryByHistoryID/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Dtos.ApplicationsDtos.findApplicationHistotyDtos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "GetTempPendingServicesByTempIDAsync",
+    "RelativePath": "api/BarberApplication/GetTempPendingServicesByTempID/GetTempPendingServicesByTempID/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Dtos.ApplicationsDtos.findTempBarberServiceGeneralDtos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "SendApplicationIntoAdminWithStatusDraftAsync",
+    "RelativePath": "api/BarberApplication/SendApplicationIntoAdminWithStatusDraft/SendApplicationIntoAdminWithStatusDraft/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "UpdateAdminApplicationIntoIntoRejectedStatusAsync",
+    "RelativePath": "api/BarberApplication/UpdateAdminApplicationIntoIntoRejectedStatus/UpdateAdminApplicationIntoIntoRejectedStatus",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.ApplicationsDtos.RejectedOrCanceledApplicarionDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "UpdateApplicationIntoWithRejectedStatusAsync",
+    "RelativePath": "api/BarberApplication/UpdateApplicationIntoWithRejectedStatus/UpdateApplicationIntoWithRejectedStatus",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.ApplicationsDtos.updateFullApplicationDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "UpdateApplicationWithDraftStatusAsync",
+    "RelativePath": "api/BarberApplication/UpdateApplicationWithDraftStatus/update-draft",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.ApplicationsDtos.updateFullApplicationDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "UpdateApplicationWithStatusRejectedAsync",
+    "RelativePath": "api/BarberApplication/UpdateApplicationWithStatusRejected/UpdateApplicationWithStatusRejected",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.ApplicationsDtos.updateFullApplicationRejectedDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BSApi.Controllers.PeopleController",
     "Method": "ActivateeAsync",
     "RelativePath": "People/Activatee/{id}",
@@ -485,6 +735,16 @@
   },
   {
     "ContainingType": "BSApi.Controllers.SpeclitController",
+    "Method": "FindAllSpeclistNamesAsync",
+    "RelativePath": "Speclit/FindAllSpeclistNames",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.SpeclitController",
     "Method": "FindAllSpecliystActiveAsync",
     "RelativePath": "Speclit/FindAllSpecliystActive",
     "HttpMethod": "GET",
@@ -505,6 +765,22 @@
         "Name": "id",
         "Type": "System.Int16",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.SpeclitController",
+    "Method": "FindServicesBySpeclistNameAsync",
+    "RelativePath": "Speclit/FindServicesBySpeclistName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "speclityName",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

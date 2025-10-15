@@ -21,25 +21,42 @@ namespace BSApi.Controllers
         [HttpGet("[action]/{id:int}")]
         public async Task<IActionResult> FindByIDAsync(short id)
         {
-            var person = await _service.FindByIDAsync(id);
-            if (person == null)
+            var entitys = await _service.FindByIDAsync(id);
+            if (entitys == null)
                 return NotFound($"speclist with ID {id} not found.");
 
-            return Ok(person);
+            return Ok(entitys);
         }
 
         [HttpGet("[action]")]
         public async Task<IActionResult> FindAllSpeclistAsync()
         {
-            var people = await _service.FindAllSpeclistAsync();
-            return Ok(people);
+            var entitys = await _service.FindAllSpeclistAsync();
+            return Ok(entitys);
         }
+
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> FindServicesBySpeclistNameAsync(string speclityName)
+        {
+            var entittys = await _service.GetServicesBySpeclityName(speclityName);
+            return Ok(entittys);
+        }
+
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> FindAllSpeclistNamesAsync()
+        {
+            var entittys = await _service.GetAllSpeclityNamesAsync();
+            return Ok(entittys);
+        }
+
 
         [HttpGet("[action]")]
         public async Task<IActionResult> FindAllSpecliystActiveAsync()
         {
-            var people = await _service.FindAllSpecliystActiveAsync();
-            return Ok(people);
+            var entittys = await _service.FindAllSpecliystActiveAsync();
+            return Ok(entittys);
         }
 
         // =================== ADD ===================

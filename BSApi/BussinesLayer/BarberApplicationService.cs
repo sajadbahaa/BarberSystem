@@ -2,6 +2,8 @@
 using DataLayer.Entities;
 using Dtos.ApplicationsDtos;
 using Repositary;
+using System;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BussinesLayer
 {
@@ -32,6 +34,12 @@ namespace BussinesLayer
         public async Task<bool> addApplicationAsync(addApplicationDtos dto)
         {
             await _repo.BeginTransactionAsync();
+
+            if (await _repo.HasUserApplicationActive(dto.UserID))
+            {
+                await _repo.RollbackAsync();
+                return false;
+            }
             // add Application.
             var enApp = _mapper.Map<BarberApplications>(dto);
             int ApplicationID = await _repo.AddCustomAsync(enApp);
@@ -49,7 +57,8 @@ namespace BussinesLayer
 
             }
 
-            var enServices = dto.addTempBarberServiceDtos.Select(x => new TempBarberServices { ApplicationID = ApplicationID, Price = x.Price, Duration = x.Duration }).ToList();
+            var enServices = dto.addTempBarberServiceDtos
+                .Select(x => new TempBarberServices { ApplicationID = ApplicationID,ServiceDetilasID= x.ServiceDetilasID, Price = x.Price, Duration = x.Duration }).ToList();
             if (!await _tempBarberServicesRepo.AddRangeCustomAsync(enServices))
             {
                 await _repo.RollbackAsync();
@@ -65,28 +74,48 @@ namespace BussinesLayer
         ///update Application 
         ///update Applicatoin with Status Draft. 
         ///not adding In Applicaion History.
-        public async Task<bool> UpdateApplicationWithDraftStatusAsync(updateApplicationDtos dto)
+        public async Task<bool> UpdateApplicationWithDraftStatusAsync(updateFullApplicationDtos dto)
         {
             await _repo.BeginTransactionAsync();
             // update Application.
-            if (!await _repo.UpdateApplicationWithStatusDraftAsync(_mapper.Map<BarberApplications>(dto)))
+            if (!await _repo.UpdateApplicationWithStatusDraftAsync(_mapper.Map<BarberApplications>(dto.UpdateApplicationDtos)))
             {
                 await _repo.RollbackAsync();
                 return false;
             }
             // Remove Temp Services.
-            if (!await _tempBarberServicesRepo.DeleteRangeAsync(dto.ServicesToDelete))
-            {
-                await _repo.RollbackAsync();
-                return false;
-            }
-            // update Temp Services.
 
-            var enTempBarberServices = _mapper.Map<List<TempBarberServices>>(dto.ServicesUpdate);
-            if (!await _tempBarberServicesRepo.UpdateTempBarberServicesAsync(enTempBarberServices))
+            if (!dto.ServicesToDelete.Contains(0))
             {
-                await _repo.RollbackAsync();
-                return false;
+                if (!await _tempBarberServicesRepo.DeleteRangeAsync(dto.ServicesToDelete))
+                {
+                    await _repo.RollbackAsync();
+                    return false;
+                }
+            }
+
+            // Update Temp Services if any
+            if (!dto.ServicesUpdate.Any(x=>x.TempServiceID==0))
+            {
+                var enTempBarberServices = _mapper.Map<List<TempBarberServices>>(dto.ServicesUpdate);
+
+                if (!await _tempBarberServicesRepo.UpdateTempBarberServicesAsync(enTempBarberServices))
+                {
+                    await _repo.RollbackAsync();
+                    return false;
+                }
+            }
+            if (!dto.AddTempBarberServiceDtos.Any(x=>x.ServiceDetilasID==0))
+            {
+                var enServices = dto.AddTempBarberServiceDtos
+                             .Select(x => new TempBarberServices { ApplicationID = dto.UpdateApplicationDtos.ApplicationID, 
+                                 ServiceDetilasID = x.ServiceDetilasID,
+                                 Price = x.Price, Duration = x.Duration }).ToList();
+                if (!await _tempBarberServicesRepo.AddRangeCustomAsync(enServices))
+                {
+                    await _repo.RollbackAsync();
+                    return false;
+                }
             }
 
             await _repo.CommitAsync();
@@ -98,34 +127,55 @@ namespace BussinesLayer
         ///accept update application with status Rejected to edit application.
         ///update application status into Draft
         ///not adding In Applicaion History.
-        public async Task<bool> UpdateApplicationIntoPendingStatusAsync(updateApplicationDtos dto)
-        {
-            await _repo.BeginTransactionAsync();
-       // update Application.
-            if (!await _repo.UpdateApplicationWithStatusDraftAsync(_mapper.Map<BarberApplications>(dto))) 
-            {
-                await _repo.RollbackAsync();
-                return false;
-            }
-        // Remove Temp Services.
-        if (!await _tempBarberServicesRepo.DeleteRangeAsync(dto.ServicesToDelete))
-            {
-                await _repo.RollbackAsync();
-                return false;
-            }
-            // update Temp Services.
+        //public async Task<bool> UpdateApplicationWithStatusRejectedAsync(updateFullApplicationDtos dto)
+        //{
+        //    await _repo.BeginTransactionAsync();
+        //    // update Application.
 
-            var enTempBarberServices = _mapper.Map<List<TempBarberServices>>(dto.ServicesUpdate);
-        if (!await _tempBarberServicesRepo.UpdateTempBarberServicesAsync(enTempBarberServices))
-            {
-                await _repo.RollbackAsync();
-                return false;
-            }
-        
-        await _repo.CommitAsync();
-            return true;
-        
-        }
+        //    var res = await _repo.UpdateApplicationWithStatusRejectedAsync(_mapper.Map<BarberApplications>(dto.updateApplicationDtos));
+        //    if (!res.Item1) 
+        //    {
+        //        await _repo.RollbackAsync();
+        //        return false;
+        //    }
+        //    // Remove Temp Services.
+
+        //    if (dto.ServicesToDelete!=null) 
+        //    {
+        //        if (!await _tempBarberServicesRepo.DeleteRangeAsync(dto.ServicesToDelete))
+        //        {
+        //            await _repo.RollbackAsync();
+        //            return false;
+        //        }
+
+        //    }
+        //    // update Temp Services.
+
+        //    if (dto.ServicesUpdate.Count>0)
+        //    {
+        //        var enTempBarberServices = _mapper.Map<List<TempBarberServices>>(dto.ServicesUpdate);
+
+
+        //        if (!await _tempBarberServicesRepo.UpdateTempBarberServicesAsync(enTempBarberServices))
+        //        {
+        //            await _repo.RollbackAsync();
+        //            return false;
+        //        }
+        //    }
+
+        //    var entity = new ApplicationsHistory { ApplicationID = dto.updateApplicationDtos.ApplicationID, 
+        //        Notes = dto.Note,
+        //        UserID = res.Item2, Status = DataLayer.Entities.EnumClasses.enApplicationStatus.PendingApproval };
+        //    if (await _applicationsHistoryRepo.AddCustomAsync(entity) == default)
+        //    {
+        //        await _repo.RollbackAsync();
+        //        return false;
+        //    }
+
+        //    await _repo.CommitAsync();
+        //    return true;
+
+        //}
 
 
         // Update Application Status into Approval Application 
@@ -134,6 +184,54 @@ namespace BussinesLayer
         /// in this case after pending barber review his application it will send into admin.
         /// and status will change into PendingApproval.
         /// </summary>
+
+        public async Task<bool> UpdateApplicationWithStatusRejectedAsync(updateFullApplicationRejectedDtos dto)
+        {
+            await _repo.BeginTransactionAsync();
+
+            // Update Application if present
+                var res = await _repo.UpdateApplicationWithStatusRejectedAsync(
+                    _mapper.Map<BarberApplications>(dto.UpdateApplicationDtos)
+                );
+
+                if (!res.Item1)
+                {
+                    await _repo.RollbackAsync();
+                    return false;
+                }
+
+          
+                // Update Temp Services if any
+                if (!dto.ServicesUpdate.Any(x=>x.TempServiceID==0))
+                {
+                    var enTempBarberServices = _mapper.Map<List<TempBarberServices>>(dto.ServicesUpdate);
+
+                    if (!await _tempBarberServicesRepo.UpdateTempBarberServicesAsync(enTempBarberServices))
+                    {
+                        await _repo.RollbackAsync();
+                        return false;
+                    }
+                }
+
+                // Add to history
+                var entity = new ApplicationsHistory
+                {
+                    ApplicationID = dto.UpdateApplicationDtos.ApplicationID,
+                    Notes = dto.Note,
+                    UserID = res.Item2,
+                    Status = DataLayer.Entities.EnumClasses.enApplicationStatus.Draft
+                };
+
+                if (await _applicationsHistoryRepo.AddCustomAsync(entity) == default)
+                {
+                    await _repo.RollbackAsync();
+                    return false;
+                }
+        
+            await _repo.CommitAsync();
+            return true;
+        }
+
 
         public async Task<bool> SendApplicationIntoAdminWithStatusDraftAsync(int ApplicationID)
         {
@@ -179,7 +277,7 @@ namespace BussinesLayer
         /// this method 
         /// admin does Accept applicaton 
         /// </summary>
-        public async Task<bool> UpdateAdminApplicationIntoIntoAcceptStatusAsync(updateApplicationDtos dto)
+        public async Task<bool> UpdateAdminApplicationIntoIntoAcceptStatusAsync(updateFullApplicationDtos dto)
         {
             throw new NotImplementedException();
 
@@ -220,21 +318,22 @@ namespace BussinesLayer
         //----------------------------# Search #-------------------------------
 
         ///<summary>
-        ///Find Applicatino Info 
+        ///Find Applicatino Info BY ID
         ///
         /// </summary
-        public async Task<findApplicationDtos> GetApplicationInfoByID(int ApplicationID)
+        public async Task<findApplicationDtos?> GetApplicationInfoByID(int ApplicationID)
         {
-            throw new NotImplementedException();
+            return _mapper.Map<findApplicationDtos>(await _repo.GetByIdAsync(ApplicationID));
         }
+
 
         ///<summary>
         ///Find All Applicatino Info 
         ///
         /// </summary
-        public async Task<List<findApplicationDtos>> GetAllApplicationsAsync()
+        public async Task<List<findApplicationDtos>?> GetAllApplicationsAsync()
         {
-            throw new NotImplementedException();
+            return _mapper.Map<List<findApplicationDtos>>(await _repo.GetAllAsync());
         }
 
         /// <summary>
@@ -244,7 +343,7 @@ namespace BussinesLayer
         /// <exception cref="NotImplementedException"></exception>
         public async Task<List<findTempBarberServiceGeneralDtos>> GetAllTempPendingServicesAsync()
         {
-            throw new NotImplementedException();
+            return _mapper.Map<List<findTempBarberServiceGeneralDtos>>(await _tempBarberServicesRepo.GetAllAsync());
         }
 
         /// <summary>
@@ -254,9 +353,9 @@ namespace BussinesLayer
         /// <exception cref="NotImplementedException"></exception>
         public async Task<findTempBarberServiceGeneralDtos> GetTempPendingServicesByTempIDAsync(int TempID)
         {
-            throw new NotImplementedException();
+            return _mapper.Map<findTempBarberServiceGeneralDtos>(await _tempBarberServicesRepo.GetByIdAsync(TempID));
         }
-     
+
 
         /// <summary>
         /// GetAllApplicationsHistotyAsync
@@ -265,7 +364,7 @@ namespace BussinesLayer
         /// <exception cref="NotImplementedException"></exception>
         public async Task<List<findApplicationHistotyDtos>> GetAllApplicationsHistotyAsync()
         {
-            throw new NotImplementedException();
+            return _mapper.Map<List<findApplicationHistotyDtos>>(await _applicationsHistoryRepo.GetAllFilterAsync());
         }
 
 
@@ -274,22 +373,19 @@ namespace BussinesLayer
         /// GetAllApplicationsHistoryByHistoryIDAsync
         /// </summary>
         /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public async Task<findApplicationHistotyDtos> GetApplicationsHistoryByHistoryIDAsync(int HistoryID)
+                public async Task<findApplicationHistotyDtos> GetApplicationsHistoryByHistoryIDAsync(int HistoryID)
         {
-            throw new NotImplementedException();
+            return _mapper.Map<findApplicationHistotyDtos>(await _applicationsHistoryRepo.GetByIdAsync(HistoryID));
         }
 
         /// <summary>
         /// GetAllApplicationHistotyGroupByApplicationAsync
         /// </summary>
         /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
-
-        public async Task<List<findApplicationHistoyByApplicationIDDtos>> GetAllApplicationHistotyGroupByApplicationAsync()
-        {
-            throw new NotImplementedException();
-        }
+        //public async Task<List<findApplicationHistoyByApplicationIDDtos>> GetAllApplicationHistotyGroupByApplicationAsync()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         
 

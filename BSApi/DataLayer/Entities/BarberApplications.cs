@@ -32,7 +32,7 @@ namespace DataLayer.Entities
         {
             ApplicationID = 0;
             UserID = 0;
-            PersonID = 0;
+            PersonID = null;
             Shop = string.Empty;
             Location = string.Empty;
             CopyFirstName = string.Empty;

@@ -22,7 +22,9 @@ namespace BsLayer.Services
             services.AddScoped<ServicesDetilasService>();
             services.AddScoped<SpeclistServices>();
             services.AddScoped<AppUserService>();
-            //services.AddScoped<PeopleService>();
+            services.AddScoped<BarberApplicationService>();
+
+
 
 
             return services;

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using DataLayer.Entities;
 using Dtos.Services;
+using Dtos.SpeclisysDtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,9 +37,12 @@ namespace BussinesLayer.Mapper
                .ForMember(x => x.ServiceID, i => i.MapFrom(x=>x.ServiceID))
                ;
 
+            
 
-
-
+            CreateMap<ServicesDetials, findServicesBySpeclityDtos>()
+                .ForMember(x=>x.ServiceName,opt=>opt.MapFrom(y=>y.servics.ServiceName))
+                .ForMember(x => x.ServiceDetilasID, opt => opt.MapFrom(y => y.ServiceDetilasID))
+;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Repositary.BaseRepo
 {
     public interface IRepository<T,Tkey> where T : class
     {
-        Task<List<T>> GetAllFilterAsync();
+        Task<List<T>?> GetAllFilterAsync();
         Task<List<T>> GetAllAsync();
         Task<T?> GetByIdAsync(Tkey id);
         Task<T?> GetByUsernameAsync(string id);

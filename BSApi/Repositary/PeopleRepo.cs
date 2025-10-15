@@ -11,7 +11,7 @@ namespace Repositary
         public PeopleRepo (AppDbContext context):base(context) 
         {
         }
-        public override async Task<List<People>> GetAllFilterAsync()
+        public override async Task<List<People>?> GetAllFilterAsync()
         {
             return await _dbSet.AsNoTracking().Where(x=>x.Enabled).ToListAsync();
         }

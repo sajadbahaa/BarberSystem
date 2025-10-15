@@ -3,6 +3,7 @@ using DataLayer.Entities;
 using Dtos.PeopleDtos;
 using Dtos.Services;
 using Dtos.SpeclisysDtos;
+using Microsoft.EntityFrameworkCore;
 using RepLayer.Services;
 using Repositary;
 using Repositary.BaseRepo;
@@ -40,6 +41,15 @@ namespace BussinesLayer
         public async Task<List<findSpecliystDtos>?> FindAllSpecliystActiveAsync()
         {
             return _mapper.Map<List<findSpecliystDtos>>(await _repo.GetAllFilterAsync());
+        }
+        public async Task<List<findServicesBySpeclityDtos>?> GetServicesBySpeclityName(string speclityName)
+        {
+            return await _serviceDetilasRepo.GetServicesBySpeciltyName(speclityName);
+        }
+
+        public async Task<List<string>?> GetAllSpeclityNamesAsync()
+        {
+            return await _repo.GetAllSpeclityNamesAsync();
         }
 
         // add 

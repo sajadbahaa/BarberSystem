@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using DataLayer.Entities;
 using Dtos.Services;
+using Dtos.SpeclisysDtos;
 using Repositary;
 
 namespace BussinesLayer
@@ -45,7 +46,7 @@ namespace BussinesLayer
             return await _repo.DeleteAsync(ID);
         }
 
-
+        
     
     
     }

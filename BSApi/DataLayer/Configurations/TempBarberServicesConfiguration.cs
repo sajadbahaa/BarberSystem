@@ -21,9 +21,6 @@ namespace DataLayer.Configurations
             builder.HasIndex(x => new { x.ApplicationID, x.ServiceDetilasID })
        .IsUnique();
 
-
-
-
             //builder.Property(x => x.Email).HasColumnType("varchar").HasMaxLength(30);
         }
     }

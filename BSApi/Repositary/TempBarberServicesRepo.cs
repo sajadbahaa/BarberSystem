@@ -1,4 +1,5 @@
 ﻿using DataLayer.Entities;
+using DataLayer.Entities.EnumClasses;
 using DTLayer.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
@@ -51,23 +52,16 @@ namespace Repositary
 /// <returns></returns>
         
         public async Task<bool> UpdateTempBarberServicesAsync(List<TempBarberServices> entities)
-        { 
-            // Group by ApplicationID (logical separation)
-      
-            int total = 0;
-
-            // Flatten all grouped entities and update in one loop
-            foreach (var e in entities)
+        {
+            _context.TempBarberServices.UpdateRange(entities);
+            foreach (var entity in entities)
             {
-                total += await _dbSet
-                    .Where(x => x.TempServiceID == e.TempServiceID)
-                    .ExecuteUpdateAsync(s => s
-                        .SetProperty(p => p.Price,e.Price)
-                        .SetProperty(p => p.Duration,e.Duration)
-                    );
-            }
+                _context.Entry(entity).Property(x => x.ApplicationID).IsModified = false;
+                _context.Entry(entity).Property(x => x.ServiceDetilasID).IsModified = false;
 
-            return total > 0;
+            }
+            var result = await _context.SaveChangesAsync();
+            return result > 0;
         }
 
 
@@ -75,15 +69,51 @@ namespace Repositary
 
         public override async Task<bool> DeleteRangeAsync(List<int> TempIDs)
         {
-            int total =  await _dbSet.Where(x=>TempIDs.Contains(x.TempServiceID)).ExecuteDeleteAsync();
+            int total = await _dbSet.Where(x => TempIDs.Contains(x.TempServiceID)).ExecuteDeleteAsync();
             return total > 0;
+        }
+
+
+        public override async Task<List<TempBarberServices>?> GetAllFilterAsync()
+        {
+            return await _dbSet.AsNoTracking()
+                .Select(x => new TempBarberServices
+                {
+                    ApplicationID = x.ApplicationID
+                 ,
+                    TempServiceID = x.TempServiceID
+                    , Duration = x.Duration
+                    , Price = x.Price
+                    , ServiceDetilasID = x.ServiceDetilasID
+                })
+                .ToListAsync();
+        }
+
+
+        public override async Task<TempBarberServices?> GetByIdAsync(int TempBarberServiceID)
+        {
+            return await _dbSet.AsNoTracking()
+                .Where(x => x.TempServiceID == TempBarberServiceID)
+                .Select(x => new TempBarberServices
+                {
+                    ApplicationID = x.ApplicationID
+                 ,
+                    TempServiceID = x.TempServiceID
+                    ,
+                    Duration = x.Duration
+                    ,
+                    Price = x.Price
+                    ,
+                    ServiceDetilasID = x.ServiceDetilasID
+                }).SingleOrDefaultAsync();
+            ;
         }
 
 
 
 
-        
-        
+
+
         //public virtual Task<bool> DeleteRangeAsync(List<T> TempIDs)
         //{
         //    throw new NotImplementedException();
@@ -98,5 +128,5 @@ namespace Repositary
 
         //public async Task<List<>>
 
-    } 
+    }
 }

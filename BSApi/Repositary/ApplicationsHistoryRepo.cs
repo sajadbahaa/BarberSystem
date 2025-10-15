@@ -23,7 +23,43 @@ namespace Repositary
             await _context.AddAsync(entity);
             return await _context.SaveChangesAsync() > 0 ? entity.HistoryID: default;
         }
-        
-        
+
+
+        public override async Task<List<ApplicationsHistory>?> GetAllFilterAsync()
+        {
+            return await _dbSet.AsNoTracking()
+                .Select(x => new ApplicationsHistory
+                {
+                    HistoryID = x.HistoryID
+                    ,ApplicationID = x.ApplicationID
+                 , UserID = x.UserID, CreateAt = x.CreateAt
+                 , Notes = x.Notes, Status = x.Status
+                    , 
+                })
+                .ToListAsync();
+        }
+
+
+        public override async Task<ApplicationsHistory?> GetByIdAsync(int HistotyID)
+        {
+            return await _dbSet.AsNoTracking().Where(x => x.HistoryID== HistotyID)
+                .Select(x => new ApplicationsHistory
+                {
+                    HistoryID = x.HistoryID
+                    ,
+                    ApplicationID = x.ApplicationID
+                 ,
+                    UserID = x.UserID,
+                    CreateAt = x.CreateAt
+                 ,
+                    Notes = x.Notes,
+                    Status = x.Status
+                }).SingleOrDefaultAsync();
+            ;
+        }
+
+
+
+
     }
 }

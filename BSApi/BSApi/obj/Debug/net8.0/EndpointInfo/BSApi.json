@@ -287,6 +287,449 @@
         }
       }
     },
+    "/api/BarberApplication/AddApplication/AddApplication": {
+      "post": {
+        "tags": [
+          "BarberApplication"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/addApplicationDtos"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/addApplicationDtos"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/addApplicationDtos"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BarberApplication/UpdateApplicationWithDraftStatus/update-draft": {
+      "put": {
+        "tags": [
+          "BarberApplication"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/updateFullApplicationDtos"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/updateFullApplicationDtos"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/updateFullApplicationDtos"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BarberApplication/UpdateApplicationWithStatusRejected/UpdateApplicationWithStatusRejected": {
+      "put": {
+        "tags": [
+          "BarberApplication"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/updateFullApplicationRejectedDtos"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/updateFullApplicationRejectedDtos"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/updateFullApplicationRejectedDtos"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BarberApplication/SendApplicationIntoAdminWithStatusDraft/SendApplicationIntoAdminWithStatusDraft/{id}": {
+      "put": {
+        "tags": [
+          "BarberApplication"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BarberApplication/UpdateAdminApplicationIntoIntoRejectedStatus/UpdateAdminApplicationIntoIntoRejectedStatus": {
+      "put": {
+        "tags": [
+          "BarberApplication"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectedOrCanceledApplicarionDtos"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectedOrCanceledApplicarionDtos"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectedOrCanceledApplicarionDtos"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BarberApplication/UpdateApplicationIntoWithRejectedStatus/UpdateApplicationIntoWithRejectedStatus": {
+      "put": {
+        "tags": [
+          "BarberApplication"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/updateFullApplicationDtos"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/updateFullApplicationDtos"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/updateFullApplicationDtos"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BarberApplication/CancelApplicationByPendingBarber": {
+      "put": {
+        "tags": [
+          "BarberApplication"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectedOrCanceledApplicarionDtos"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectedOrCanceledApplicarionDtos"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectedOrCanceledApplicarionDtos"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BarberApplication/GetApplicationInfoByID/GetApplicationInfoByID/{id}": {
+      "get": {
+        "tags": [
+          "BarberApplication"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/findApplicationDtos"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/findApplicationDtos"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/findApplicationDtos"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BarberApplication/GetAllApplications/GetAllApplications": {
+      "get": {
+        "tags": [
+          "BarberApplication"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/findApplicationDtos"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/findApplicationDtos"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/findApplicationDtos"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BarberApplication/GetAllTempPendingServices/GetAllTempPendingServices": {
+      "get": {
+        "tags": [
+          "BarberApplication"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/findTempBarberServiceGeneralDtos"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/findTempBarberServiceGeneralDtos"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/findTempBarberServiceGeneralDtos"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BarberApplication/GetTempPendingServicesByTempID/GetTempPendingServicesByTempID/{id}": {
+      "get": {
+        "tags": [
+          "BarberApplication"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/findTempBarberServiceGeneralDtos"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/findTempBarberServiceGeneralDtos"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/findTempBarberServiceGeneralDtos"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BarberApplication/GetAllApplicationsHistoty/GetAllApplicationsHistoty": {
+      "get": {
+        "tags": [
+          "BarberApplication"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/findApplicationHistotyDtos"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/findApplicationHistotyDtos"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/findApplicationHistotyDtos"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BarberApplication/GetApplicationsHistoryByHistoryID/GetApplicationsHistoryByHistoryID/{id}": {
+      "get": {
+        "tags": [
+          "BarberApplication"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/findApplicationHistotyDtos"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/findApplicationHistotyDtos"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/findApplicationHistotyDtos"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/People/FindByID/{id}": {
       "get": {
         "tags": [
@@ -657,6 +1100,39 @@
         }
       }
     },
+    "/Speclit/FindServicesBySpeclistName": {
+      "get": {
+        "tags": [
+          "Speclit"
+        ],
+        "parameters": [
+          {
+            "name": "speclityName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Speclit/FindAllSpeclistNames": {
+      "get": {
+        "tags": [
+          "Speclit"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Speclit/FindAllSpecliystActive": {
       "get": {
         "tags": [
@@ -854,6 +1330,24 @@
         },
         "additionalProperties": false
       },
+      "RejectedOrCanceledApplicarionDtos": {
+        "type": "object",
+        "properties": {
+          "applicatinoID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "reason": {
+            "type": "string",
+            "nullable": true
+          },
+          "userID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "ResetPasswordDto": {
         "type": "object",
         "properties": {
@@ -889,6 +1383,47 @@
           },
           "phone": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "addApplicationDtos": {
+        "type": "object",
+        "properties": {
+          "userID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "shop": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "copyFirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "copySecondName": {
+            "type": "string",
+            "nullable": true
+          },
+          "copyLastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "copyPhone": {
+            "type": "string",
+            "nullable": true
+          },
+          "addTempBarberServiceDtos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/addTempBarberServiceDtos"
+            },
             "nullable": true
           }
         },
@@ -950,6 +1485,24 @@
         },
         "additionalProperties": false
       },
+      "addTempBarberServiceDtos": {
+        "type": "object",
+        "properties": {
+          "serviceDetilasID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "duration": {
+            "type": "string",
+            "format": "date-span"
+          }
+        },
+        "additionalProperties": false
+      },
       "addUserDtos": {
         "type": "object",
         "properties": {
@@ -968,6 +1521,181 @@
           "createAt": {
             "type": "string",
             "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "findApplicationDtos": {
+        "type": "object",
+        "properties": {
+          "applicationID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "shop": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "copyFirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "copySecondName": {
+            "type": "string",
+            "nullable": true
+          },
+          "copyLastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "copyPhone": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "findApplicationHistotyDtos": {
+        "type": "object",
+        "properties": {
+          "historyID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "applicationID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "findTempBarberServiceGeneralDtos": {
+        "type": "object",
+        "properties": {
+          "tempServiceID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceDetilasID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "duration": {
+            "type": "string",
+            "format": "date-span"
+          }
+        },
+        "additionalProperties": false
+      },
+      "updateApplicationDtos": {
+        "type": "object",
+        "properties": {
+          "applicationID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "shop": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "copyFirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "copySecondName": {
+            "type": "string",
+            "nullable": true
+          },
+          "copyLastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "copyPhone": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "updateFullApplicationDtos": {
+        "type": "object",
+        "properties": {
+          "updateApplicationDtos": {
+            "$ref": "#/components/schemas/updateApplicationDtos"
+          },
+          "servicesUpdate": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/updateTempBarberServiceDtos"
+            },
+            "nullable": true
+          },
+          "servicesToDelete": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "addTempBarberServiceDtos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/addTempBarberServiceDtos"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "updateFullApplicationRejectedDtos": {
+        "type": "object",
+        "properties": {
+          "updateApplicationDtos": {
+            "$ref": "#/components/schemas/updateApplicationDtos"
+          },
+          "servicesUpdate": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/updateTempBarberServiceDtos"
+            },
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1008,6 +1736,24 @@
           "description": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "updateTempBarberServiceDtos": {
+        "type": "object",
+        "properties": {
+          "tempServiceID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "duration": {
+            "type": "string",
+            "format": "date-span"
           }
         },
         "additionalProperties": false

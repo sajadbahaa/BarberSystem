@@ -8,7 +8,6 @@ namespace Dtos.ApplicationsDtos
 {
     public  class addApplicationDtos
     {
-        public int ApplicationID { get; set; }
         public int UserID { get; set; }
         public string Shop { get; set; } = string.Empty;
         public string Location { get; set; } = string.Empty;
