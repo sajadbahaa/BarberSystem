@@ -55,10 +55,10 @@ namespace BSApi.Controllers
             return result ? Ok("Application rejected successfully.") : BadRequest("Failed to reject application.");
         }
 
-        [HttpPut("[action]")]
-        public async Task<IActionResult> UpdateApplicationIntoWithRejectedStatusAsync([FromBody] updateFullApplicationDtos dto)
+        [HttpPut("[action]/{ApplicationID:int}")]
+        public async Task<IActionResult> UpdateAdminApplicationIntoAcceptStatusAsync( int ApplicationID)
         {
-            var result = await _service.UpdateAdminApplicationIntoIntoAcceptStatusAsync(dto);
+            var result = await _service.UpdateAdminApplicationIntoAcceptStatusAsync(ApplicationID);
             return result ? Ok("Application accepted successfully.") : BadRequest("Failed to accept application.");
         }
 

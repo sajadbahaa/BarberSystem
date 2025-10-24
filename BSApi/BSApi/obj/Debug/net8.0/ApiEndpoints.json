@@ -153,6 +153,22 @@
   },
   {
     "ContainingType": "WebAPI.Controllers.AppUserController",
+    "Method": "Login",
+    "RelativePath": "api/AppUser/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.UsersDtos.LoginDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.AppUserController",
     "Method": "ResetPassword",
     "RelativePath": "api/AppUser/ResetPassword",
     "HttpMethod": "PUT",
@@ -371,6 +387,22 @@
   },
   {
     "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "UpdateAdminApplicationIntoAcceptStatusAsync",
+    "RelativePath": "api/BarberApplication/UpdateAdminApplicationIntoAcceptStatus/UpdateAdminApplicationIntoAcceptStatus/{ApplicationID}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ApplicationID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
     "Method": "UpdateAdminApplicationIntoIntoRejectedStatusAsync",
     "RelativePath": "api/BarberApplication/UpdateAdminApplicationIntoIntoRejectedStatus/UpdateAdminApplicationIntoIntoRejectedStatus",
     "HttpMethod": "PUT",
@@ -380,22 +412,6 @@
       {
         "Name": "dto",
         "Type": "Dtos.ApplicationsDtos.RejectedOrCanceledApplicarionDtos",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BSApi.Controllers.BarberApplicationController",
-    "Method": "UpdateApplicationIntoWithRejectedStatusAsync",
-    "RelativePath": "api/BarberApplication/UpdateApplicationIntoWithRejectedStatus/UpdateApplicationIntoWithRejectedStatus",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "Dtos.ApplicationsDtos.updateFullApplicationDtos",
         "IsRequired": true
       }
     ],
@@ -431,6 +447,42 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarbersController",
+    "Method": "FindByIDAsync",
+    "RelativePath": "Barbers/FindByID/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarbersController",
+    "Method": "GetAllBarbersAsync",
+    "RelativePath": "Barbers/GetAllBarbers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarbersController",
+    "Method": "MyProfileAsync",
+    "RelativePath": "Barbers/MyProfile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

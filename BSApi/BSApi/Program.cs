@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using BsLayer.maaper;
+﻿using BsLayer.maaper;
 using BsLayer.Services;
+using BussinesLayer.Services.Jwt;
 using DataLayer.Data;
 using DTLayer.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using RepLayer.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,25 +21,25 @@ builder.Services.ConfigureDatabase(builder.Configuration);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.addBussinesServices();
+builder.Services.AddJwtServices(builder.Configuration);
 builder.Services.AddRepoServices();
-
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = IdentityConstants.ApplicationScheme;
-    options.DefaultChallengeScheme = IdentityConstants.ApplicationScheme;
-    options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
-});
 
 var app = builder.Build();
 
 
 
 
+//using (var scope = app.Services.CreateScope())
+//{
+//    var services = scope.ServiceProvider;
+//    await services.SeedRolesAsync();
+//}
 using (var scope = app.Services.CreateScope())
 {
-    var services = scope.ServiceProvider;
-    await services.SeedRolesAsync();
+    await scope.ServiceProvider.InitializeAsync();
 }
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
