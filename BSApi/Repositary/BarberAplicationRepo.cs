@@ -260,5 +260,20 @@ namespace Repositary
                 .AnyAsync(x => x.UserID == UserID && x.Status != enApplicationStatus.Canceled);
         }
 
+
+
+        private async Task<int> _AddBarberDetailsAsync(int applicationId)
+        {
+            // EF Core 9: ExecuteSqlInterpolatedAsync ترجع عدد الصفوف المتأثرة
+            int affectedRows = await _context.Database
+                .ExecuteSqlInterpolatedAsync($"EXEC SP_AddBarberDetails @ApplicationID = {applicationId}");
+
+            return affectedRows; // عادة > 0 يعني نجاح
+        }
+        public async Task<bool> AdminAcceptApplication(int ApplicationID) 
+        {
+            return await _AddBarberDetailsAsync(ApplicationID) > 0;
+        }
+
     }
 }

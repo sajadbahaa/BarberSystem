@@ -20,22 +20,22 @@ namespace Repositary
         private readonly UserManager<AppUser> _userManager;
 
         public UserRepo(AppDbContext context, RoleManager<IdentityRole<int>> roleManager, UserManager<AppUser> userManager)
-         
+
             : base(context)
         {
             _roleManager = roleManager;
             _userManager = userManager;
-        
+
         }
         public override async Task<AppUser?> GetByUsernameAsync(string userName)
         {
             return await _dbSet.AsNoTracking().FirstOrDefaultAsync(x => x.UserName == userName);
         }
-        public  async Task<AppUser?> GetByEmailAsync(string email)
+        public async Task<AppUser?> GetByEmailAsync(string email)
         {
             return await _dbSet.AsNoTracking().FirstOrDefaultAsync(x => x.Email == email);
         }
-        public  async Task<bool> UsernameOrEmailUsedAsync(int UserID , string  Username,string Email)
+        public async Task<bool> UsernameOrEmailUsedAsync(int UserID, string Username, string Email)
         {
             return await _dbSet.AsNoTracking()
      .AnyAsync(x =>
@@ -52,7 +52,7 @@ namespace Repositary
         {
             return await _dbSet.AsNoTracking()
      .AnyAsync(x =>
-         (!string.IsNullOrEmpty(Username) &&x.UserName == Username )||
+         (!string.IsNullOrEmpty(Username) && x.UserName == Username) ||
           (!string.IsNullOrEmpty(Email) && x.Email == Email)
      );
         }
@@ -66,11 +66,11 @@ namespace Repositary
 
         public override async Task<bool> UpdateAsync(AppUser entity)
         {
-            
-            var res = await _dbSet.Where(c=>c.Id==entity.Id)
+
+            var res = await _dbSet.Where(c => c.Id == entity.Id)
                 .ExecuteUpdateAsync
                 (x => x
-                .SetProperty(i=>i.UpdateAt,DateTime.Now)
+                .SetProperty(i => i.UpdateAt, DateTime.Now)
                 .SetProperty(i => i.UserName, entity.UserName)
                 .SetProperty(i => i.Email, entity.Email)
 
@@ -127,8 +127,8 @@ namespace Repositary
                 ).Join(_context.Roles
                 , ur => ur.RoleID,
                 r => r.Id
-                , (x, y) => new { x.UserID,roleName  =  y.Name }
-                ).GroupBy(x=>x.UserID).Select(y=>new findUserWithRolesDtos {UserID = y.Key,Roles = y.Select(x=>x.roleName).ToList()})
+                , (x, y) => new { x.UserID, roleName = y.Name }
+                ).GroupBy(x => x.UserID).Select(y => new findUserWithRolesDtos { UserID = y.Key, Roles = y.Select(x => x.roleName).ToList() })
                 .ToListAsync();
 
             return result;
@@ -205,6 +205,36 @@ namespace Repositary
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
             var result = await _userManager.ResetPasswordAsync(user, token, newPassword);
             return result.Succeeded;
+        }
+        public async Task<(AppUser?, List<string>?)> LoginAsync(string username,string Password)
+        {
+            var result = await _context.Users
+                .Where(u => u.UserName == username)
+                .Join(_context.UserRoles,
+                      user => user.Id,
+                      ur => ur.UserId,
+                      (user, ur) => new { user, ur.RoleId })
+                .Join(_context.Roles,
+                      combined => combined.RoleId,
+                      role => role.Id,
+                      (combined, role) => new { combined.user, RoleName = role.Name })
+                .GroupBy(x => x.user)
+                .Select(g => new
+                {
+                    User = g.Key,
+                    Roles = g.Select(r => r.RoleName).ToList()
+                })
+                .SingleOrDefaultAsync();
+
+            if (result == null)
+                return (null, null);
+
+            if (! await  _userManager.CheckPasswordAsync(result.User, Password)) 
+            {
+                return (null, null);
+            }
+            ;
+            return (result.User, result.Roles);
         }
 
     }

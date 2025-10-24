@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 
 
+
 namespace Repositary.BaseRepo
 {
     public abstract class Repo<T, TKey> : IRepository<T, TKey>, ITransactionService where T : class
@@ -137,6 +138,8 @@ namespace Repositary.BaseRepo
             throw new NotImplementedException();
 
         }
+
+   
 
 
     }

@@ -45,6 +45,8 @@ namespace Repositary
                 );
             return res > 0;
         }
+     
+        
         public override  async Task<bool> DeleteAsync(int id)
         {
             var res = await _dbSet.Where(x => x.PersonID == id).ExecuteUpdateAsync
