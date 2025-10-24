@@ -277,10 +277,9 @@ namespace BussinesLayer
         /// this method 
         /// admin does Accept applicaton 
         /// </summary>
-        public async Task<bool> UpdateAdminApplicationIntoIntoAcceptStatusAsync(updateFullApplicationDtos dto)
+        public async Task<bool> UpdateAdminApplicationIntoAcceptStatusAsync(int ApplicationID)
         {
-            throw new NotImplementedException();
-
+            return await _repo.AdminAcceptApplication(ApplicationID);
         }
 
         // Cancel Application By Pending Barber.

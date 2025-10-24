@@ -173,6 +173,16 @@ namespace BussinesLayer
             return await _repo.DeleteAsync(ID);
         }
 
+        public async Task<(AppUser?, List<string>?)> LogainAsync(string UserName,string Password)
+        {
+            //await _repo.LoginAsync(UserName); ;
+            var result = await _repo.LoginAsync(UserName,Password);
+
+            // result هو (AppUser?, List<string>?)
+            if (result.Item1 == null)
+                return (null, null);
+            return (result.Item1, result.Item2);
+        }
 
 
 

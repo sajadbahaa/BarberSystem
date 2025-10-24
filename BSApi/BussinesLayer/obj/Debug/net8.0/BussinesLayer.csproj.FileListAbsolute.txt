@@ -1,9 +1,3 @@
-D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\BussinesLayer.csproj.AssemblyReference.cache
-D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\BussinesLayer.GeneratedMSBuildEditorConfig.editorconfig
-D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\BussinesLayer.AssemblyInfoInputs.cache
-D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\BussinesLayer.AssemblyInfo.cs
-D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\BussinesLayer.csproj.CoreCompileInputs.cache
-D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\BussinesLayer.sourcelink.json
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\bin\Debug\net8.0\BussinesLayer.deps.json
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\bin\Debug\net8.0\BussinesLayer.dll
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\bin\Debug\net8.0\BussinesLayer.pdb
@@ -13,6 +7,12 @@ D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\bin\Debug\net
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\bin\Debug\net8.0\Dtos.pdb
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\bin\Debug\net8.0\Repositary.pdb
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\bin\Debug\net8.0\DataLayer.pdb
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\BussinesLayer.csproj.AssemblyReference.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\BussinesLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\BussinesLayer.AssemblyInfoInputs.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\BussinesLayer.AssemblyInfo.cs
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\BussinesLayer.csproj.CoreCompileInputs.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\BussinesLayer.sourcelink.json
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\Bussines.7AD6049C.Up2Date
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\BussinesLayer.dll
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BussinesLayer\obj\Debug\net8.0\refint\BussinesLayer.dll
