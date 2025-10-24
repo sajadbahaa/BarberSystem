@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Configurations
 {
-    public class PeopleConfiguration : IEntityTypeConfiguration<People>
+    public class PeopleConfiguration : BarberServiceConfiguration, IEntityTypeConfiguration<People>
     {
         public void Configure(EntityTypeBuilder<People> builder)
         {
@@ -22,6 +22,7 @@ namespace DataLayer.Configurations
             builder.Property(x => x.Phone).HasColumnType("varchar").HasMaxLength(12);
             
             builder.Property(x => x.Enabled).HasDefaultValue(true);
+
 
         }
     }

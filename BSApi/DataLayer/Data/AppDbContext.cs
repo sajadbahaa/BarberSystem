@@ -52,6 +52,7 @@ namespace DTLayer.Data
         public DbSet<BarberApplications> BarberApplications { get; set; }
         public DbSet<TempBarberServices> TempBarberServices { get; set; }
         public DbSet<ApplicationsHistory> applicationsHistory { get; set; }
-
+        public DbSet<Barbers> barbers { get; set; }
+        public DbSet<BarberServices> barberServices { get; set; }
     }
 }

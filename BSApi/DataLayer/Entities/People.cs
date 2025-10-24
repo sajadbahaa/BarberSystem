@@ -17,6 +17,8 @@ namespace DataLayer.Entities
         //public string ? Email { get; set; }
         public bool Enabled { get; set; }
 
+        public Barbers?Barbers { get; set; }
+
         public BarberApplications ? BarberApplications { get; set; }
         public People()
         {

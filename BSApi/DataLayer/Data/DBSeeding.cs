@@ -11,42 +11,56 @@ namespace DataLayer.Data
 {
    static public class DBSeeding
     {
-        static async Task EnsureAdminExists(string adminUserName, string Password, string Email, UserManager<AppUser>? roleManager)
+        //static async Task EnsureAdminExists(string adminUserName, string Password, string Email, UserManager<AppUser>? roleManager)
+        //{
+        //    if (await roleManager.FindByNameAsync(adminUserName) == null)
+        //    {
+        //        var adminUser = new AppUser
+        //        {
+        //            Email = Email,       // مهم لأن RequireUniqueEmail = true
+        //            EmailConfirmed = true,
+        //            UserName = adminUserName,
+        //        };
+
+        //        var result = await roleManager.CreateAsync(adminUser, Password);
+        //        if (result.Succeeded)
+        //        {
+        //            await roleManager.AddToRoleAsync(adminUser, "Admin");
+        //        }
+        //    }
+        //}
+        public static async Task InitializeAsync(this IServiceProvider serviceProvider)
         {
-            if (await roleManager.FindByNameAsync(adminUserName) == null)
+            using var scope = serviceProvider.CreateScope();
+
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
+            var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole<int>>>();
+
+            // 1️⃣ Check if roles exist first — only seed if empty
+            if (!roleManager.Roles.Any())
             {
-                var adminUser = new AppUser
-                {
-                    Email = Email,       // مهم لأن RequireUniqueEmail = true
-                    EmailConfirmed = true,
-                    UserName = adminUserName,
-                };
-
-                var result = await roleManager.CreateAsync(adminUser, Password);
-                if (result.Succeeded)
-                {
-                    await roleManager.AddToRoleAsync(adminUser, "Admin");
-                }
-            }
-        }
-        public static async Task SeedRolesAsync(this IServiceProvider serviceProvider)
-        {
-            var userManager = serviceProvider.GetRequiredService<UserManager<AppUser>>();
-
-            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole<int>>>();
-
-            string[] roles = new[] { "Admin", "Barber", "Customer","PendingBarber" };
-            foreach (var role in roles)
-            {
-                if (!await roleManager.RoleExistsAsync(role))
+                string[] roles = { "Admin", "Barber", "Customer", "PendingBarber" };
+                foreach (var role in roles)
                     await roleManager.CreateAsync(new IdentityRole<int>(role));
             }
 
-            // 2️⃣ إنشاء Admin تلقائي إذا لم يكن موجود
-            string adminUserName = "admin";
-            string adminPassword = "Admin@123"; // يمكنك تغييره لاحقًا
-            await EnsureAdminExists(adminUserName, adminPassword, "admin@gmail.com", userManager);
-            
+            // 2️⃣ Check if admin already exists
+            if (!userManager.Users.Any(u => u.UserName == "admin"))
+            {
+                var adminUser = new AppUser
+                {
+                    UserName = "admin",
+                    Email = "admin@gmail.com",
+                    EmailConfirmed = true
+                };
+
+                var result = await userManager.CreateAsync(adminUser, "Admin@123");
+                if (result.Succeeded)
+                {
+                    await userManager.AddToRoleAsync(adminUser, "Admin");
+                }
             }
         }
     }
+}
+    

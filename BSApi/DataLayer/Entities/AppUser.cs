@@ -17,7 +17,10 @@ namespace DataLayer.Entities
 
         public ICollection<BarberApplications> ? barberApplications { get; set; } = new List<BarberApplications>();
         public ICollection<ApplicationsHistory>? applicationsHistories { get; set; } = new List<ApplicationsHistory>();
+        public Barbers? Barbers { get; set; }
 
+        // 👇 هذه العلاقة تربط المستخدم بالأدوار
+        public virtual ICollection<IdentityUserRole<int>> UserRoles { get; set; } = new List<IdentityUserRole<int>>();
         public AppUser()
         {
 
