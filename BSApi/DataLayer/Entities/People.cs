@@ -18,7 +18,7 @@ namespace DataLayer.Entities
         public bool Enabled { get; set; }
 
         public Barbers?Barbers { get; set; }
-
+        public Customers? Customer { get; set; }
         public BarberApplications ? BarberApplications { get; set; }
         public People()
         {

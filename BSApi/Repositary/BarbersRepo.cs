@@ -49,22 +49,26 @@ namespace Repositary
         }
 
 // edit update barber Info.
-        public override async Task<bool> UpdateAsync(Barbers entity)
+        public async Task<bool> UpdateBarberInfoAsync(Barbers entity,int UserID)
         {
 
-            var res = await _dbSet.Where(x => x.BarberID== entity.BarberID)
+            var res = await _dbSet.Where(x => x.UserID==UserID)
                 .ExecuteUpdateAsync
-                (x => x.SetProperty(i => i.ShopName, i=>i.ShopName==entity.ShopName?i.ShopName:entity.ShopName)
-                .SetProperty(i => i.Location, i => i.Location== entity.Location ? i.Location : entity.Location)
-                .SetProperty(i => i.people.FirstName, entity.people.FirstName)
-                .SetProperty(i => i.people.SecondName, entity.people.SecondName)
-                .SetProperty(i => i.people.LastName, entity.people.LastName)
-.SetProperty(i => i.people.Phone, entity.people.Phone)
-                );
+                (x => x.SetProperty(i => i.ShopName, i=>i.ShopName==entity.ShopName || entity.ShopName.Length==0?i.ShopName:entity.ShopName)
+                .SetProperty(i => i.Location, i => i.Location== entity.Location ||entity .Location.Length == 0 ? i.Location : entity.Location)                );
             return res > 0;
         }
 
-
+        public async Task<List<string>> GetMyServices(int userId)
+        {
+            var result = await _dbSet
+                .Where(b => b.UserID == userId)
+                .Join(_context.barberServices, b => b.BarberID, bs => bs.BarberID, (b, bs) => new { b, bs })
+                .Join(_context.ServicesDetials, temp => temp.bs.ServiceDetilasID, sd => sd.ServiceDetilasID, (temp, sd) => new { temp.b, sd })
+                .Join(_context.servics, temp => temp.sd.ServiceID, s => s.ServiceID, (temp, s) => s.ServiceName)
+                .ToListAsync();
+            return result;
+        }
 
 
         // un secure support Sql Injuction .

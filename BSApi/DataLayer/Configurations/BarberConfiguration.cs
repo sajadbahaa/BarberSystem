@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DataLayer.Configurations
 {
-    public class BarberConfiguration:IEntityTypeConfiguration<Barbers>
+    public class BarberConfiguration: IEntityTypeConfiguration<Barbers>
     {
 
         public void Configure(EntityTypeBuilder<Barbers> builder)
@@ -20,13 +20,6 @@ namespace DataLayer.Configurations
                 .HasDefaultValue((decimal)0.0);
             builder.HasOne(x => x.people).WithOne(x => x.Barbers).HasForeignKey<Barbers>(x => x.PersonID);
             builder.HasOne(x => x.user).WithOne(x => x.Barbers).HasForeignKey<Barbers>(x => x.UserID);
-
-
-            //builder.Property(x => x.);
-
-            //builder.Property(x => x.Price).HasPrecision(18, 2);
-            //builder.Property(x => x.Duration).HasColumnType("time");
-
 
         }
     }

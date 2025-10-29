@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography.Pkcs;
 using Dtos.BarbersDtos;
+using System.Net;
 
 namespace Repositary
 {
@@ -38,6 +39,9 @@ namespace Repositary
             return await _dbSet.AsNoTracking().ToListAsync();
         }
 
+       
+
+
         public override async Task<bool> UpdateAsync(BarberServices  entity)
         {
             var res = await _dbSet.Where(x => x.BarberServiceID == entity.BarberServiceID)
@@ -59,7 +63,11 @@ namespace Repositary
             return res > 0;
         }
 
-
+        public async  Task<int> getBarberIDByUserID(int UserID)
+        {
+            var res = await _context.barbers.SingleOrDefaultAsync(x => x.UserID == UserID);
+            return res==null?0:res.BarberID;
+        }
         public override async Task<bool> ActivateAsync(int BarberServiceID)
         {
             var res = await _dbSet.Where(x => x.BarberServiceID== BarberServiceID).ExecuteUpdateAsync

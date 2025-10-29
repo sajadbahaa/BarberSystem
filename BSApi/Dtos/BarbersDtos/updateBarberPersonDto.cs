@@ -9,7 +9,6 @@ namespace Dtos.BarbersDtos
 {
     public  class updateBarberPersonDto
     {
-        public int BarberID { get; init; }
         public string ShopName { get; set; } = null!;
         public string Location { get; set; } = null!;
 

@@ -284,6 +284,31 @@ namespace DataLayer.Migrations
                     b.ToTable("barbers");
                 });
 
+            modelBuilder.Entity("DataLayer.Entities.Customers", b =>
+                {
+                    b.Property<int>("CustomerID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CustomerID"));
+
+                    b.Property<int>("PersonID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
+                    b.HasKey("CustomerID");
+
+                    b.HasIndex("PersonID")
+                        .IsUnique();
+
+                    b.HasIndex("UserID")
+                        .IsUnique();
+
+                    b.ToTable("Customers");
+                });
+
             modelBuilder.Entity("DataLayer.Entities.People", b =>
                 {
                     b.Property<int>("PersonID")
@@ -545,7 +570,12 @@ namespace DataLayer.Migrations
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("AppUserId")
+                        .HasColumnType("int");
+
                     b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("AppUserId");
 
                     b.HasIndex("RoleId");
 
@@ -648,6 +678,25 @@ namespace DataLayer.Migrations
                     b.Navigation("user");
                 });
 
+            modelBuilder.Entity("DataLayer.Entities.Customers", b =>
+                {
+                    b.HasOne("DataLayer.Entities.People", "person")
+                        .WithOne("Customer")
+                        .HasForeignKey("DataLayer.Entities.Customers", "PersonID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DataLayer.Entities.AppUser", "user")
+                        .WithOne("Customers")
+                        .HasForeignKey("DataLayer.Entities.Customers", "UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("person");
+
+                    b.Navigation("user");
+                });
+
             modelBuilder.Entity("DataLayer.Entities.ServicesDetials", b =>
                 {
                     b.HasOne("DataLayer.Entities.Servics", "servics")
@@ -716,6 +765,10 @@ namespace DataLayer.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
                 {
+                    b.HasOne("DataLayer.Entities.AppUser", null)
+                        .WithMany("UserRoles")
+                        .HasForeignKey("AppUserId");
+
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole<int>", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
@@ -742,6 +795,10 @@ namespace DataLayer.Migrations
                 {
                     b.Navigation("Barbers");
 
+                    b.Navigation("Customers");
+
+                    b.Navigation("UserRoles");
+
                     b.Navigation("applicationsHistories");
 
                     b.Navigation("barberApplications");
@@ -764,6 +821,8 @@ namespace DataLayer.Migrations
                     b.Navigation("BarberApplications");
 
                     b.Navigation("Barbers");
+
+                    b.Navigation("Customer");
                 });
 
             modelBuilder.Entity("DataLayer.Entities.ServicesDetials", b =>

@@ -450,6 +450,74 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BSApi.Controllers.CustomerController",
+    "Method": "GetAllCustomers",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.CustomerController",
+    "Method": "AddCustomer",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.CustomerDtos.addCustomerPersonDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.CustomerController",
+    "Method": "GetCustomerByUserId",
+    "RelativePath": "api/Customer/by-user",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarbersController",
+    "Method": "AddBarberServiceAsync",
+    "RelativePath": "Barbers/AddBarberService",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.BarbersDtos.addBarberServiceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarbersController",
+    "Method": "FindBarberServiceByIDAsync",
+    "RelativePath": "Barbers/FindBarberServiceByID/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BSApi.Controllers.BarbersController",
     "Method": "FindByIDAsync",
     "RelativePath": "Barbers/FindByID/{id}",
@@ -477,12 +545,64 @@
   },
   {
     "ContainingType": "BSApi.Controllers.BarbersController",
+    "Method": "GetAllBarbersServicesAsync",
+    "RelativePath": "Barbers/GetAllBarbersServices",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarbersController",
+    "Method": "GetMyServicesAsync",
+    "RelativePath": "Barbers/GetMyServices",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarbersController",
     "Method": "MyProfileAsync",
     "RelativePath": "Barbers/MyProfile",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarbersController",
+    "Method": "UpdateAsync",
+    "RelativePath": "Barbers/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.BarbersDtos.updateBarberPersonDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarbersController",
+    "Method": "UpdateBarberServiceAsync",
+    "RelativePath": "Barbers/UpdateBarberService",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.BarbersDtos.updateBarberServiceDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

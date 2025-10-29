@@ -14,12 +14,18 @@ namespace BussinesLayer
     public  class BarbersServices
     {
         readonly BarbersRepo _repo;
+        readonly PeopleRepo _peopleRepo;
         readonly IMapper _mapper;
 
-        public BarbersServices(BarbersRepo repo,IMapper mapper)
+        public BarbersServices(BarbersRepo repo,IMapper mapper, PeopleRepo peopleRepo)
         {
             _repo = repo;
             _mapper = mapper;
+            _peopleRepo = peopleRepo;
+        }
+        public async Task<List<string>> GetMyServices(int UserID)
+        {
+            return await _repo.GetMyServices(UserID);
         }
 
         public async Task<findBarberDtos?> GetBarberByIDAsync(int BarberID)
@@ -36,5 +42,24 @@ namespace BussinesLayer
             return _mapper.Map<findBarberDtos>(await _repo.GetByUserIdAsync(userID));
 
         }
+
+        // update Barber Info.
+        public async Task<bool> UpdateBarberInfo(int UserID,updateBarberPersonDto dto)
+        {
+            await _repo.BeginTransactionAsync();
+             if (!await _peopleRepo.UpdateAsync(_mapper.Map<People>(dto.peopleDtos)))
+            {
+                await _repo.RollbackAsync();
+                return false;
+            }
+            if (!await _repo.UpdateBarberInfoAsync(_mapper.Map<Barbers>(dto), UserID))
+            {
+                await _repo.RollbackAsync();
+                return false;
+            }
+            await _repo.CommitAsync();
+            return true;
+        }
+
     }
 }

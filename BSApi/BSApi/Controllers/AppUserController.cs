@@ -112,7 +112,7 @@ namespace WebAPI.Controllers
             // تحقق هل المستخدم يحاول تعديل بياناته فقط
             if (dto.Id != userIdFromToken)
             {
-                return Forbid("You are not allowed to update other users.");
+                return Forbid("You are not allowed to update other user.");
             }
 
             var res = await _service.UpdateUserAsync(dto);
@@ -127,7 +127,7 @@ namespace WebAPI.Controllers
             // تحقق هل المستخدم يحاول تعديل بياناته فقط
             if (dto.UserId != userIdFromToken)
             {
-                return Forbid("You are not allowed to update other users.");
+                return Forbid("You are not allowed to update other user.");
             }
 
 
@@ -135,17 +135,17 @@ namespace WebAPI.Controllers
             return Ok(res);
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPut("[action]")]
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto dto)
         {
-            var userIdFromToken = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            //var userIdFromToken = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
 
-            // تحقق هل المستخدم يحاول تعديل بياناته فقط
-            if (dto.UserId != userIdFromToken)
-            {
-                return Forbid("You are not allowed to update other users.");
-            }
+            //// تحقق هل المستخدم يحاول تعديل بياناته فقط
+            //if (dto.UserId != userIdFromToken)
+            //{
+            //    return Forbid("You are not allowed to update other user.");
+            //}
 
 
             var res = await _service.ResetPassword(dto);
@@ -164,7 +164,7 @@ namespace WebAPI.Controllers
             // تحقق هل المستخدم يحاول تعديل بياناته فقط
             if (id != userIdFromToken)
             {
-                return Forbid("You are not allowed to update other users.");
+                return Forbid("You are not allowed to update other user.");
             }
 
 
@@ -187,7 +187,7 @@ namespace WebAPI.Controllers
             // تحقق هل المستخدم يحاول تعديل بياناته فقط
             if (id != userIdFromToken)
             {
-                return Forbid("You are not allowed to update other users.");
+                return Forbid("You are not allowed to update other user.");
             }
             var success = await _service.DeleteAsync(id);
             if (!success)

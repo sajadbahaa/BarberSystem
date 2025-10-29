@@ -49,7 +49,7 @@ namespace BussinesLayer.Services.Jwt
                 issuer: _config["JWT:Issuer"],
                 audience: _config["JWT:Audience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(5),
+                expires: DateTime.UtcNow.AddMinutes(10),
                 signingCredentials: creds ); 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
