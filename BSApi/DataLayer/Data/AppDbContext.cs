@@ -55,6 +55,7 @@ namespace DTLayer.Data
         public DbSet<Barbers> barbers { get; set; }
         public DbSet<BarberServices> barberServices { get; set; }
         public DbSet<Customers> Customers { get; set; }
+        public DbSet<Appointments> Appointments { get; set; }
 
     }
 }

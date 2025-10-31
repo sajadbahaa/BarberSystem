@@ -1,0 +1,16 @@
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\bin\Debug\net8.0\ValidationLayer.deps.json
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\bin\Debug\net8.0\ValidationLayer.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\bin\Debug\net8.0\ValidationLayer.pdb
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\obj\Debug\net8.0\ValidationLayer.csproj.AssemblyReference.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\obj\Debug\net8.0\ValidationLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\obj\Debug\net8.0\ValidationLayer.AssemblyInfoInputs.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\obj\Debug\net8.0\ValidationLayer.AssemblyInfo.cs
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\obj\Debug\net8.0\ValidationLayer.csproj.CoreCompileInputs.cache
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\obj\Debug\net8.0\ValidationLayer.sourcelink.json
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\obj\Debug\net8.0\ValidationLayer.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\obj\Debug\net8.0\refint\ValidationLayer.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\obj\Debug\net8.0\ValidationLayer.pdb
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\obj\Debug\net8.0\ref\ValidationLayer.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\bin\Debug\net8.0\Dtos.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\bin\Debug\net8.0\Dtos.pdb
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\ValidationLayer\obj\Debug\net8.0\Validati.37C3D79D.Up2Date

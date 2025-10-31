@@ -16,5 +16,7 @@ public int BarberID { get; set; }
         public ServicesDetials ServicesDetials { get; set; } = null!;
         public Barbers barbers { get; set; } = null!;
         public bool Enabled {  get; set; }  
+
+        public ICollection<Appointments>? appointments { get; set; }
     }
 }

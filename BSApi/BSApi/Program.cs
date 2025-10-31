@@ -3,9 +3,12 @@ using BsLayer.Services;
 using BussinesLayer.Services.Jwt;
 using DataLayer.Data;
 using DTLayer.Services;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using RepLayer.Services;
+using ValidationLayer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +22,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.ConfigureDatabase(builder.Configuration);
 //builder.Services.AddAutoMapper(typeof(PeopleProfile).Assembly);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
+builder.Services.AddValidatorsFromAssemblyContaining<addAppointmentValidation>();
+builder.Services.AddFluentValidationAutoValidation();
 builder.Services.addBussinesServices();
 builder.Services.AddJwtServices(builder.Configuration);
 builder.Services.AddRepoServices();

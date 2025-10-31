@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pvU7VgOS3co=",
+  "dgSpecHash": "sH7ot0PzXOc=",
   "success": true,
   "projectFilePath": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\BSApi.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,9 @@
     "C:\\Users\\nsr.as\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\nsr.as\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\nsr.as\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\nsr.as\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
+    "C:\\Users\\nsr.as\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.1\\fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
+    "C:\\Users\\nsr.as\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.11.0\\fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
     "C:\\Users\\nsr.as\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\nsr.as\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.3.0\\microsoft.aspnetcore.authentication.2.3.0.nupkg.sha512",
     "C:\\Users\\nsr.as\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
@@ -53,7 +56,7 @@
     "C:\\Users\\nsr.as\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\9.0.8\\microsoft.extensions.configuration.fileextensions.9.0.8.nupkg.sha512",
     "C:\\Users\\nsr.as\\.nuget\\packages\\microsoft.extensions.configuration.json\\9.0.8\\microsoft.extensions.configuration.json.9.0.8.nupkg.sha512",
     "C:\\Users\\nsr.as\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.8\\microsoft.extensions.dependencyinjection.9.0.8.nupkg.sha512",
-    "C:\\Users\\nsr.as\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.8\\microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512",
+    "C:\\Users\\nsr.as\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.9\\microsoft.extensions.dependencyinjection.abstractions.9.0.9.nupkg.sha512",
     "C:\\Users\\nsr.as\\.nuget\\packages\\microsoft.extensions.dependencymodel\\9.0.8\\microsoft.extensions.dependencymodel.9.0.8.nupkg.sha512",
     "C:\\Users\\nsr.as\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\8.0.1\\microsoft.extensions.diagnostics.abstractions.8.0.1.nupkg.sha512",
     "C:\\Users\\nsr.as\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\9.0.8\\microsoft.extensions.fileproviders.abstractions.9.0.8.nupkg.sha512",

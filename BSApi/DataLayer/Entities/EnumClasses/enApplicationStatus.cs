@@ -10,8 +10,8 @@ namespace DataLayer.Entities.EnumClasses
     {
         Draft = 1,
         PendingApproval = 2,
-        Accepted = 3,
+        Completed = 3,
         Canceled = 4,
-        Rejected = 5
+        Rejected = 5,
     }
 }

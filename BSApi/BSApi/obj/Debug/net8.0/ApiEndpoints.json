@@ -1,5 +1,181 @@
 [
   {
+    "ContainingType": "BSApi.Controllers.AppointmentsController",
+    "Method": "AddAsync",
+    "RelativePath": "api/Appointments/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.AppointmentDtos.addAppointmentDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.AppointmentsController",
+    "Method": "FindAllAppointmentsDtos",
+    "RelativePath": "api/Appointments/FindAllAppointmentsDtos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dtos.AppointmentDtos.findAppointmentDtos, Dtos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.AppointmentsController",
+    "Method": "FindAppointmentDtos",
+    "RelativePath": "api/Appointments/FindAppointmentDtos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Dtos.AppointmentDtos.findAppointmentDtos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.AppointmentsController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/Appointments/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.AppointmentDtos.updateAppointmentDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.AppointmentsController",
+    "Method": "UpdateAppointmentToCanceledAsync",
+    "RelativePath": "api/Appointments/UpdateAppointmentToCanceled/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.AppointmentsController",
+    "Method": "UpdateAppointmentToCompletedAsync",
+    "RelativePath": "api/Appointments/UpdateAppointmentToCompleted/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.AppointmentsController",
+    "Method": "UpdateAppointmentToPendingApprovalAsync",
+    "RelativePath": "api/Appointments/UpdateAppointmentToPendingApproval/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "WebAPI.Controllers.AppUserController",
     "Method": "ActivateeAsync",
     "RelativePath": "api/AppUser/Activatee/{id}",

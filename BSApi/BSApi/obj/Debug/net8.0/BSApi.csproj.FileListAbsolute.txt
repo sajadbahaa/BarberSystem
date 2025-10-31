@@ -199,3 +199,8 @@ D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Debug\net8.0\refi
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Debug\net8.0\BSApi.pdb
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Debug\net8.0\BSApi.genruntimeconfig.cache
 D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\obj\Debug\net8.0\ref\BSApi.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\bin\Debug\net8.0\FluentValidation.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\bin\Debug\net8.0\ValidationLayer.dll
+D:\VisualStudio-Projects\Projects\BarberSystem\BSApi\BSApi\bin\Debug\net8.0\ValidationLayer.pdb

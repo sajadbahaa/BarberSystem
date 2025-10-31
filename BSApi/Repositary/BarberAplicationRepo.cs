@@ -188,7 +188,7 @@ namespace Repositary
 
         public async Task<List<BarberApplications>> GetAllApplicationAcceptAsync()
         {
-            return await _dbSet.AsNoTracking().Where(x => x.Status == enApplicationStatus.Accepted)
+            return await _dbSet.AsNoTracking().Where(x => x.Status == enApplicationStatus.Completed)
                 .Select(x => new BarberApplications
                 {
                     ApplicationID = x.ApplicationID

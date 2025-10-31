@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "U3mCdrA8s/s=",
+  "success": true,
+  "projectFilePath": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\ValidationLayer\\ValidationLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nsr.as\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
+    "C:\\Users\\nsr.as\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.9\\microsoft.extensions.dependencyinjection.abstractions.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -140,6 +140,41 @@ namespace DataLayer.Migrations
                     b.ToTable("applicationsHistory");
                 });
 
+            modelBuilder.Entity("DataLayer.Entities.Appointments", b =>
+                {
+                    b.Property<int>("AppointmentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AppointmentID"));
+
+                    b.Property<int>("BarberServiceID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CustomerID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Note")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<byte>("status")
+                        .HasColumnType("TINYINT");
+
+                    b.HasKey("AppointmentID");
+
+                    b.HasIndex("CustomerID");
+
+                    b.HasIndex("BarberServiceID", "StartDate", "EndDate", "status");
+
+                    b.ToTable("Appointments");
+                });
+
             modelBuilder.Entity("DataLayer.Entities.BarberApplications", b =>
                 {
                     b.Property<int>("ApplicationID")
@@ -623,6 +658,25 @@ namespace DataLayer.Migrations
                     b.Navigation("user");
                 });
 
+            modelBuilder.Entity("DataLayer.Entities.Appointments", b =>
+                {
+                    b.HasOne("DataLayer.Entities.BarberServices", "barberServices")
+                        .WithMany("appointments")
+                        .HasForeignKey("BarberServiceID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DataLayer.Entities.Customers", "customer")
+                        .WithMany("appointments")
+                        .HasForeignKey("CustomerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("barberServices");
+
+                    b.Navigation("customer");
+                });
+
             modelBuilder.Entity("DataLayer.Entities.BarberApplications", b =>
                 {
                     b.HasOne("DataLayer.Entities.People", "person")
@@ -811,9 +865,19 @@ namespace DataLayer.Migrations
                     b.Navigation("applicationsHistories");
                 });
 
+            modelBuilder.Entity("DataLayer.Entities.BarberServices", b =>
+                {
+                    b.Navigation("appointments");
+                });
+
             modelBuilder.Entity("DataLayer.Entities.Barbers", b =>
                 {
                     b.Navigation("BarberServices");
+                });
+
+            modelBuilder.Entity("DataLayer.Entities.Customers", b =>
+                {
+                    b.Navigation("appointments");
                 });
 
             modelBuilder.Entity("DataLayer.Entities.People", b =>
