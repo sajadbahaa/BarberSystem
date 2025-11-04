@@ -9,7 +9,6 @@ namespace Dtos.ApplicationsDtos
     public  class updateFullApplicationRejectedDtos
     {
         public updateApplicationDtos UpdateApplicationDtos { get; set; } = null!; // optional
-        public List<updateTempBarberServiceDtos> ServicesUpdate { get; set; } = null!; // optional
         public string? Note { get; set; } // optional        
     }
 }

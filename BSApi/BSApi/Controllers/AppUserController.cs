@@ -95,7 +95,6 @@ namespace WebAPI.Controllers
             return Ok(res);
         }
 
-        [Authorize]
         [HttpPost("[action]")]
         public async Task<IActionResult> AddPendingBarberAsync([FromBody] addUserDtos dto)
         {
@@ -103,7 +102,6 @@ namespace WebAPI.Controllers
             return res? Ok(res):BadRequest();
         }
 
-        [Authorize]
         [HttpPut("[action]")]
         public async Task<IActionResult> UpdateUserAsync([FromBody] updateUserDtos dto)
         {
@@ -139,13 +137,13 @@ namespace WebAPI.Controllers
         [HttpPut("[action]")]
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto dto)
         {
-            //var userIdFromToken = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var userIdFromToken = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
 
-            //// تحقق هل المستخدم يحاول تعديل بياناته فقط
-            //if (dto.UserId != userIdFromToken)
-            //{
-            //    return Forbid("You are not allowed to update other user.");
-            //}
+            // تحقق هل المستخدم يحاول تعديل بياناته فقط
+            if (dto.UserId != userIdFromToken&dto.UserId!=dto.UserId)
+            {
+                return Forbid("You are not allowed to update other user.");
+            }
 
 
             var res = await _service.ResetPassword(dto);

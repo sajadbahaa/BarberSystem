@@ -393,8 +393,24 @@
   },
   {
     "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "addTempBarberServiceAsync",
+    "RelativePath": "api/BarberApplication/addTempBarberService/addTempBarberService",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.ApplicationsDtos.addTempBabrerServiceListDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
     "Method": "CancelApplicationByPendingBarberAsync",
-    "RelativePath": "api/BarberApplication/CancelApplicationByPendingBarber",
+    "RelativePath": "api/BarberApplication/CancelApplicationByPendingBarber/CancelApplicationByPendingBarber",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -547,6 +563,22 @@
   },
   {
     "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "RemoveTempBarberServiceAsync",
+    "RelativePath": "api/BarberApplication/RemoveTempBarberService/RemoveTempBarberService",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.ApplicationsDtos.DeleteTempBarberServiceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
     "Method": "SendApplicationIntoAdminWithStatusDraftAsync",
     "RelativePath": "api/BarberApplication/SendApplicationIntoAdminWithStatusDraft/SendApplicationIntoAdminWithStatusDraft/{id}",
     "HttpMethod": "PUT",
@@ -564,14 +596,14 @@
   {
     "ContainingType": "BSApi.Controllers.BarberApplicationController",
     "Method": "UpdateAdminApplicationIntoAcceptStatusAsync",
-    "RelativePath": "api/BarberApplication/UpdateAdminApplicationIntoAcceptStatus/UpdateAdminApplicationIntoAcceptStatus/{ApplicationID}",
+    "RelativePath": "api/BarberApplication/UpdateAdminApplicationIntoAcceptStatus/UpdateAdminApplicationIntoAcceptStatus",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ApplicationID",
-        "Type": "System.Int32",
+        "Name": "dto",
+        "Type": "Dtos.ApplicationsDtos.updateApplicationAcceptDto",
         "IsRequired": true
       }
     ],
@@ -596,14 +628,14 @@
   {
     "ContainingType": "BSApi.Controllers.BarberApplicationController",
     "Method": "UpdateApplicationWithDraftStatusAsync",
-    "RelativePath": "api/BarberApplication/UpdateApplicationWithDraftStatus/update-draft",
+    "RelativePath": "api/BarberApplication/UpdateApplicationWithDraftStatus/UpdateApplicationWithDraftStatus",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "Dtos.ApplicationsDtos.updateFullApplicationDtos",
+        "Type": "Dtos.ApplicationsDtos.updateApplicationDtos",
         "IsRequired": true
       }
     ],
@@ -620,6 +652,22 @@
       {
         "Name": "dto",
         "Type": "Dtos.ApplicationsDtos.updateFullApplicationRejectedDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "UpdateTempBarberServiceAsync",
+    "RelativePath": "api/BarberApplication/UpdateTempBarberService/UpdateTempBarberService",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.ApplicationsDtos.updateTempBarberServiceListDtos",
         "IsRequired": true
       }
     ],
@@ -660,6 +708,130 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.RatingController",
+    "Method": "AddRatingAsync",
+    "RelativePath": "api/Rating/AddRating",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.RatingsDtos.addRatingDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.RatingController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/Rating/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.RatingsDtos.deleteRatingDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.RatingController",
+    "Method": "GetAllRatingsAsync",
+    "RelativePath": "api/Rating/GetAllRatings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dtos.RatingsDtos.findRatingDtos, Dtos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.RatingController",
+    "Method": "GetRatingByIDAsync",
+    "RelativePath": "api/Rating/GetRatingByID/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Dtos.RatingsDtos.findRatingDtos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.RatingController",
+    "Method": "UpdateRatingAsync",
+    "RelativePath": "api/Rating/UpdateRating",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dtos.RatingsDtos.updateRatingDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "BSApi.Controllers.BarbersController",

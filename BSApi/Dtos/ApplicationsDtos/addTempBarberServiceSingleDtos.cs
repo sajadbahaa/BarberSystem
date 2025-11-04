@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Dtos.ApplicationsDtos
 {
-    public  class addTempBarberServiceDtos
+    public  class addTempBarberServiceSingleDtos
     {
         public short ServiceDetilasID { get; set; }
         public decimal Price { get; set; }
         
         public TimeSpan Duration { get; set; }
     
-    public addTempBarberServiceDtos()
+    public addTempBarberServiceSingleDtos()
         {
             ServiceDetilasID = 0;
             Price = 0;

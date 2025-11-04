@@ -43,7 +43,12 @@ namespace Repositary
             var entity = await _dbSet.AsNoTracking().SingleOrDefaultAsync(x => x.UserID == userID);
             return  entity.PersonID;
         }
-
+        public async Task<bool> IsCustomerSameUserIDAsync(int userID,int customerID)
+        {
+            var res = 
+            await _dbSet.AnyAsync(x=>x.CustomerID==customerID&&x.UserID==userID);
+            return res;
+        }
 
     }
 }

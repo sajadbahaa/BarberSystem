@@ -52,12 +52,16 @@ namespace BussinesLayer.Mapper
 
             // add Temp services
 
-            CreateMap<addTempBarberServiceDtos,TempBarberServices>()
+            CreateMap<addTempBarberServiceSingleDtos,TempBarberServices>()
                 .ForMember(x => x.barberApplication, opt => opt.Ignore())
                 .ForMember(x => x.servicesDetials, opt => opt.Ignore());
 
+            CreateMap<addTempBabrerServiceListDtos, TempBarberServices>()
+                .ForMember(x => x.barberApplication, opt => opt.Ignore())
+                .ForMember(x => x.servicesDetials, opt => opt.Ignore())
+                .ForMember(x=>x.ApplicationID,opt=>opt.MapFrom(c=>c.ApplicationID));
 
-            
+
 
 
             /// update Application 

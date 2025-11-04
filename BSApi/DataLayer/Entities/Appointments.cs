@@ -18,8 +18,9 @@ namespace DataLayer.Entities
         public string ? Note { get; set; }
         public Customers customer { get; init; }
         public BarberServices barberServices { get; set; }
-    
-    public Appointments()
+        public Ratings? ratings { get; set; }
+
+        public Appointments()
         {
             StartDate = DateTime.Now;
             status =  enApplicationStatus.Draft;

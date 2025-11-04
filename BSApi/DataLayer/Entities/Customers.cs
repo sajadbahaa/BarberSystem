@@ -14,6 +14,7 @@ namespace DataLayer.Entities
         public AppUser user { get; set; }
         public People person {  get; set; }
         public ICollection<Appointments>? appointments { get; set; }
+        public ICollection<Ratings>? ratings { get; set; }
         public Customers()
         {
             CustomerID = 0;

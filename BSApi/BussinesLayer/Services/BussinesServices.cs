@@ -27,9 +27,8 @@ namespace BsLayer.Services
             services.AddScoped<BarberServiceServices>();
             services.AddScoped<CustomersServices>();
             services.AddScoped<AppoitmentServices>();
-
-
-
+            services.AddScoped<RatingsService>();
+            
             return services;
         }
     }

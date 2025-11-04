@@ -12,7 +12,6 @@ namespace Dtos.ApplicationsDtos
         public short TempServiceID { get; set; }
         public decimal Price { get; set; }
         public TimeSpan Duration { get; set; }
- 
     public updateTempBarberServiceDtos()
         {
             TempServiceID = 0;

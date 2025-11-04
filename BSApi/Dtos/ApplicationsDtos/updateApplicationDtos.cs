@@ -15,5 +15,8 @@ namespace Dtos.ApplicationsDtos
         public string CopySecondName { get; set; } = string.Empty;
         public string CopyLastName { get; set; } = string.Empty;
         public string? CopyPhone { get; set; } = null;
+    
+    public int userID { get; set; }
+    
     }
 }

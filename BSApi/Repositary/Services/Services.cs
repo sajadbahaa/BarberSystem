@@ -24,7 +24,7 @@ namespace RepLayer.Services
             services.AddScoped<BarbersServiceRepo>();
             services.AddScoped<CustomerRepo>();
             services.AddScoped<AppointmentsRepo>();
-
+            services.AddScoped<RatingRepo>();
             //services.AddScoped<RolesRepo>();
 
 

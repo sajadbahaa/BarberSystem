@@ -113,6 +113,19 @@ namespace Repositary
             return result > 0;
 
         }
+
+
+        
+        public async Task<bool> IsAppointmentOwnedByBarberAsync(int userId, int appointmentId)
+        {
+            // AsNoTracking: لأننا نتحقق فقط، ما نحتاج تتبع الكيانات
+            return await _context.barbers
+                .AsNoTracking()
+                .Where(b => b.UserID == userId) // فلترة على المستخدم الحالي
+                .AnyAsync(b => b.BarberServices
+                                .Any(bs => bs.appointments
+                                             .Any(a => a.AppointmentID == appointmentId)));
+        }
         public async Task<bool> UpdateAppointmentToPendingApprovalAsync(int AppoointmentID)
         {
             return
@@ -139,7 +152,7 @@ namespace Repositary
  (x.status == enApplicationStatus.PendingApproval))
                           .ExecuteUpdateAsync
                               (i => i
-          .SetProperty(y => y.status, enApplicationStatus.Completed)
+          .SetProperty(y => y.status, enApplicationStatus.Canceled)
           );
             return result > 0;
 

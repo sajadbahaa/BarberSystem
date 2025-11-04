@@ -1,6 +1,8 @@
 ﻿using BussinesLayer;
 using Dtos.AppointmentDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace BSApi.Controllers
 {
@@ -33,46 +35,87 @@ namespace BSApi.Controllers
             return Ok(result);
         }
 
+        [Authorize(Roles = "Customer")]
         [HttpPost]
         [Route("[action]")]
         public async Task<ActionResult<int>> AddAsync([FromBody] addAppointmentDtos dto)
         {
-            var id = await _service.AddAsync(dto);
+            var userIdFromToken = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+
+            if (userIdFromToken == default)
+            {
+                return Forbid("Un Authorize.");
+            }
+
+            var id = await _service.AddAsync(dto,userIdFromToken);
             return id==0?BadRequest(): Ok($"add appointment [{id}] success.");
         }
 
+        [Authorize(Roles = "Customer")]
         [HttpPut]
         [Route("[action]")]
         public async Task<ActionResult<bool>> UpdateAsync([FromBody] updateAppointmentDtos dto)
         {
-            var result = await _service.UpdateAsync(dto);
+            var userIdFromToken = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+
+            if (userIdFromToken == default)
+            {
+                return Forbid("Un Authorize.");
+            }
+            var result = await _service.UpdateAsync(dto,userIdFromToken);
             if (!result) return BadRequest("Update failed");
             return Ok(result);
         }
 
+        [Authorize(Roles = "Barber")]
         [HttpPut]
         [Route("[action]/{id:int}")]
         public async Task<ActionResult<bool>> UpdateAppointmentToPendingApprovalAsync(int id)
         {
-            var result = await _service.UpdateAppointmentToPendingApprovalAsync(id);
+
+            var userIdFromToken = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+
+            if (userIdFromToken == default)
+            {
+                return Forbid("Un Authorize.");
+            }
+
+            //br01
+            var result = await _service.UpdateAppointmentToPendingApprovalAsync(userIdFromToken,id);
             if (!result) return BadRequest("Update failed");
             return Ok(result);
         }
 
+        [Authorize(Roles = "Barber")]
         [HttpPut]
         [Route("[action]/{id:int}")]
         public async Task<ActionResult<bool>> UpdateAppointmentToCompletedAsync(int id)
         {
-            var result = await _service.UpdateAppointmentToCompletedAsync(id);
+            var userIdFromToken = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+
+            if (userIdFromToken == default)
+            {
+                return Forbid("Un Authorize.");
+            }
+
+            var result = await _service.UpdateAppointmentToCompletedAsync(userIdFromToken,id);
             if (!result) return BadRequest("Update failed");
             return Ok(result);
         }
 
+
+        [Authorize(Roles = "Barber")]
         [HttpPut]
         [Route("[action]/{id:int}")]
         public async Task<ActionResult<bool>> UpdateAppointmentToCanceledAsync(int id)
         {
-            var result = await _service.UpdateAppointmentToCanceledAsync(id);
+            var userIdFromToken = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+
+            if (userIdFromToken == default)
+            {
+                return Forbid("Un Authorize.");
+            }
+            var result = await _service.UpdateAppointmentToCanceledAsync(userIdFromToken, id);
             if (!result) return BadRequest("Update failed");
             return Ok(result);
         }

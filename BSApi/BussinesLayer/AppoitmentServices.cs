@@ -16,13 +16,17 @@ namespace BussinesLayer
     {
         readonly IMapper _mapper;
         readonly AppointmentsRepo _repo;
+        readonly CustomerRepo _customerRepo;
                 public AppoitmentServices(AppointmentsRepo repo
             , TempBarberServicesRepo tempBarberServicesRepo, IMapper mapper,
-            ApplicationsHistoryRepo applicationsHistoryRepo
+            ApplicationsHistoryRepo applicationsHistoryRepo,
+            CustomerRepo customerRepo
             )
         {
             _repo = repo;
             _mapper = mapper;
+            _customerRepo = customerRepo;
+
         }
 
         public async Task<findAppointmentDtos?> FindAppointmentDtos(int appointmentID)
@@ -35,8 +39,15 @@ namespace BussinesLayer
             return _mapper.Map<List<findAppointmentDtos>>(await _repo.GetAllAsync());
         }
 
-public async Task<int> AddAsync(addAppointmentDtos dto)
+    public async Task<int> AddAsync(addAppointmentDtos dto,int userID)
         {
+            // check user id is it a customer .
+
+            if (! await _customerRepo.IsCustomerSameUserIDAsync(userID, dto.CustomerID))
+            {
+                return 0;
+            }
+
             
             var res = _mapper.Map<Appointments>(dto);
             if (!await _repo.HascustomerIDAppointmentAsync(res.CustomerID, res.StartDate, res.EndDate))
@@ -47,28 +58,46 @@ public async Task<int> AddAsync(addAppointmentDtos dto)
             return await _repo.AddCustomAsync(res);
         }
 
-        public async Task<bool> UpdateAsync(updateAppointmentDtos dto)
+        public async Task<bool> UpdateAsync(updateAppointmentDtos dto,int userID)
         {
+
+            if (!await _customerRepo.IsCustomerSameUserIDAsync(userID, dto.CustomerID))
+            {
+                return false;
+            }
+
             return await _repo.UpdateAsync(_mapper.Map<Appointments>(dto));
         }
 
 
 
-        public async Task<bool> UpdateAppointmentToPendingApprovalAsync(int AppoointmentID)
+        public async Task<bool> UpdateAppointmentToPendingApprovalAsync(int userID,int AppoointmentID)
         {
+            if ( !await _repo.IsAppointmentOwnedByBarberAsync(userID,AppoointmentID))
+            {
+                return false;
+            }
             return
             await _repo.UpdateAppointmentToPendingApprovalAsync(AppoointmentID);
         }
 
 
-        public async Task<bool> UpdateAppointmentToCompletedAsync(int AppointmentID)
+        public async Task<bool> UpdateAppointmentToCompletedAsync(int userID,int AppointmentID)
         {
+            if (!await _repo.IsAppointmentOwnedByBarberAsync(userID, AppointmentID))
+            {
+                return false;
+            }
             return await _repo.UpdateAppointmentToCompletedAsync(AppointmentID);
 
         }
 
-        public async Task<bool> UpdateAppointmentToCanceledAsync(int AppointmentID)
+        public async Task<bool> UpdateAppointmentToCanceledAsync(int userID, int AppointmentID)
         {
+            if (!await _repo.IsAppointmentOwnedByBarberAsync(userID, AppointmentID))
+            {
+                return false;
+            }
             return await _repo.UpdateAppointmentToCanceledAsync(AppointmentID);
         }
 

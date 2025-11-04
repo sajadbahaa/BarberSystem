@@ -381,6 +381,50 @@ namespace DataLayer.Migrations
                     b.ToTable("People");
                 });
 
+            modelBuilder.Entity("DataLayer.Entities.Ratings", b =>
+                {
+                    b.Property<int>("RatingID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RatingID"));
+
+                    b.Property<int>("AppointmentID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BarberID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Comment")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CustomerID")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDelted")
+                        .HasColumnType("bit");
+
+                    b.Property<byte>("Score")
+                        .HasColumnType("Tinyint");
+
+                    b.Property<DateTime?>("UpdateAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("RatingID");
+
+                    b.HasIndex("AppointmentID")
+                        .IsUnique();
+
+                    b.HasIndex("BarberID");
+
+                    b.HasIndex("CustomerID");
+
+                    b.ToTable("Ratings");
+                });
+
             modelBuilder.Entity("DataLayer.Entities.ServicesDetials", b =>
                 {
                     b.Property<short>("ServiceDetilasID")
@@ -751,6 +795,33 @@ namespace DataLayer.Migrations
                     b.Navigation("user");
                 });
 
+            modelBuilder.Entity("DataLayer.Entities.Ratings", b =>
+                {
+                    b.HasOne("DataLayer.Entities.Appointments", "appointments")
+                        .WithOne("ratings")
+                        .HasForeignKey("DataLayer.Entities.Ratings", "AppointmentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DataLayer.Entities.Barbers", "Barber")
+                        .WithMany("ratings")
+                        .HasForeignKey("BarberID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DataLayer.Entities.Customers", "Customer")
+                        .WithMany("ratings")
+                        .HasForeignKey("CustomerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Barber");
+
+                    b.Navigation("Customer");
+
+                    b.Navigation("appointments");
+                });
+
             modelBuilder.Entity("DataLayer.Entities.ServicesDetials", b =>
                 {
                     b.HasOne("DataLayer.Entities.Servics", "servics")
@@ -858,6 +929,11 @@ namespace DataLayer.Migrations
                     b.Navigation("barberApplications");
                 });
 
+            modelBuilder.Entity("DataLayer.Entities.Appointments", b =>
+                {
+                    b.Navigation("ratings");
+                });
+
             modelBuilder.Entity("DataLayer.Entities.BarberApplications", b =>
                 {
                     b.Navigation("TempBarberServices");
@@ -873,11 +949,15 @@ namespace DataLayer.Migrations
             modelBuilder.Entity("DataLayer.Entities.Barbers", b =>
                 {
                     b.Navigation("BarberServices");
+
+                    b.Navigation("ratings");
                 });
 
             modelBuilder.Entity("DataLayer.Entities.Customers", b =>
                 {
                     b.Navigation("appointments");
+
+                    b.Navigation("ratings");
                 });
 
             modelBuilder.Entity("DataLayer.Entities.People", b =>

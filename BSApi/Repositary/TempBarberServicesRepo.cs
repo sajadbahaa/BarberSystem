@@ -66,10 +66,13 @@ namespace Repositary
 
 
 
-
-        public override async Task<bool> DeleteRangeAsync(List<int> TempIDs)
+        public  async Task<bool> DeleteRangeAsync(List<int> tempIDs, int applicationID)
         {
-            int total = await _dbSet.Where(x => TempIDs.Contains(x.TempServiceID)).ExecuteDeleteAsync();
+            int total = await _dbSet
+                .Where(x => tempIDs.Contains(x.TempServiceID)
+                         && _dbSet.Count(y => y.ApplicationID == applicationID) > 1)
+                .ExecuteDeleteAsync();
+
             return total > 0;
         }
 

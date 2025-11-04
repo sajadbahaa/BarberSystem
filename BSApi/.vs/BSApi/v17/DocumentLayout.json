@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{85B500C8-D813-4B07-B735-179FF3EB4758}|BSApi\\BSApi.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\bsapi\\controllers\\ratingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85B500C8-D813-4B07-B735-179FF3EB4758}|BSApi\\BSApi.csproj|solutionrelative:bsapi\\controllers\\ratingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CF0DC2A-358A-4D3B-B816-534EF7983775}|BussinesLayer\\BussinesLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\bussineslayer\\ratingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CF0DC2A-358A-4D3B-B816-534EF7983775}|BussinesLayer\\BussinesLayer.csproj|solutionrelative:bussineslayer\\ratingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\repositary\\barbersrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|solutionrelative:repositary\\barbersrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\repositary\\ratingrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|solutionrelative:repositary\\ratingrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\dtos\\ratingsdtos\\deleteratingdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|solutionrelative:dtos\\ratingsdtos\\deleteratingdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{907B5983-D784-46B7-B51C-8369953BF9C9}|ValidationLayer\\ValidationLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\validationlayer\\deleteratingvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{907B5983-D784-46B7-B51C-8369953BF9C9}|ValidationLayer\\ValidationLayer.csproj|solutionrelative:validationlayer\\deleteratingvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C07757A6-60F9-459E-B66B-4AB220E90F0D}|DataLayer\\DataLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\datalayer\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C07757A6-60F9-459E-B66B-4AB220E90F0D}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C07757A6-60F9-459E-B66B-4AB220E90F0D}|DataLayer\\DataLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\datalayer\\services\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C07757A6-60F9-459E-B66B-4AB220E90F0D}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\services\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{85B500C8-D813-4B07-B735-179FF3EB4758}|BSApi\\BSApi.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\bsapi\\controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85B500C8-D813-4B07-B735-179FF3EB4758}|BSApi\\BSApi.csproj|solutionrelative:bsapi\\controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,44 +47,108 @@
       "RelativeMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|solutionrelative:repositary\\appointmentsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C07757A6-60F9-459E-B66B-4AB220E90F0D}|DataLayer\\DataLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\datalayer\\entities\\appointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C07757A6-60F9-459E-B66B-4AB220E90F0D}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\entities\\appointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{85B500C8-D813-4B07-B735-179FF3EB4758}|BSApi\\BSApi.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\bsapi\\controllers\\barberapplicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85B500C8-D813-4B07-B735-179FF3EB4758}|BSApi\\BSApi.csproj|solutionrelative:bsapi\\controllers\\barberapplicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\dtos\\appointmentdtos\\updateappointmentdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|solutionrelative:dtos\\appointmentdtos\\updateappointmentdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\dtos\\applicationsdtos\\updatefullapplicationrejecteddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|solutionrelative:dtos\\applicationsdtos\\updatefullapplicationrejecteddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C07757A6-60F9-459E-B66B-4AB220E90F0D}|DataLayer\\DataLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\datalayer\\entities\\enumclasses\\enapplicationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C07757A6-60F9-459E-B66B-4AB220E90F0D}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\entities\\enumclasses\\enapplicationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\repositary\\tempbarberservicesrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|solutionrelative:repositary\\tempbarberservicesrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85B500C8-D813-4B07-B735-179FF3EB4758}|BSApi\\BSApi.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\bsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85B500C8-D813-4B07-B735-179FF3EB4758}|BSApi\\BSApi.csproj|solutionrelative:bsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\repositary\\barberaplicationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|solutionrelative:repositary\\barberaplicationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{907B5983-D784-46B7-B51C-8369953BF9C9}|ValidationLayer\\ValidationLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\validationlayer\\addappointmentvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{907B5983-D784-46B7-B51C-8369953BF9C9}|ValidationLayer\\ValidationLayer.csproj|solutionrelative:validationlayer\\addappointmentvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\dtos\\applicationsdtos\\rejectedorcanceledapplicariondtos.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|solutionrelative:dtos\\applicationsdtos\\rejectedorcanceledapplicariondtos.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{907B5983-D784-46B7-B51C-8369953BF9C9}|ValidationLayer\\ValidationLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\validationlayer\\updateappointmentvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{907B5983-D784-46B7-B51C-8369953BF9C9}|ValidationLayer\\ValidationLayer.csproj|solutionrelative:validationlayer\\updateappointmentvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\dtos\\applicationsdtos\\updateapplicationacceptdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|solutionrelative:dtos\\applicationsdtos\\updateapplicationacceptdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CF0DC2A-358A-4D3B-B816-534EF7983775}|BussinesLayer\\BussinesLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\bussineslayer\\mapper\\appointmentprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CF0DC2A-358A-4D3B-B816-534EF7983775}|BussinesLayer\\BussinesLayer.csproj|solutionrelative:bussineslayer\\mapper\\appointmentprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\dtos\\applicationsdtos\\deletetempbarberservicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|solutionrelative:dtos\\applicationsdtos\\deletetempbarberservicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85B500C8-D813-4B07-B735-179FF3EB4758}|BSApi\\BSApi.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\bsapi\\controllers\\peoplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85B500C8-D813-4B07-B735-179FF3EB4758}|BSApi\\BSApi.csproj|solutionrelative:bsapi\\controllers\\peoplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CF0DC2A-358A-4D3B-B816-534EF7983775}|BussinesLayer\\BussinesLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\bussineslayer\\services\\jwt\\jwtservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CF0DC2A-358A-4D3B-B816-534EF7983775}|BussinesLayer\\BussinesLayer.csproj|solutionrelative:bussineslayer\\services\\jwt\\jwtservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CF0DC2A-358A-4D3B-B816-534EF7983775}|BussinesLayer\\BussinesLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\bussineslayer\\services\\bussinesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CF0DC2A-358A-4D3B-B816-534EF7983775}|BussinesLayer\\BussinesLayer.csproj|solutionrelative:bussineslayer\\services\\bussinesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CF0DC2A-358A-4D3B-B816-534EF7983775}|BussinesLayer\\BussinesLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\bussineslayer\\services\\auth\\jwtauthenticationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CF0DC2A-358A-4D3B-B816-534EF7983775}|BussinesLayer\\BussinesLayer.csproj|solutionrelative:bussineslayer\\services\\auth\\jwtauthenticationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C07757A6-60F9-459E-B66B-4AB220E90F0D}|DataLayer\\DataLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\datalayer\\data\\dbseeding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C07757A6-60F9-459E-B66B-4AB220E90F0D}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\data\\dbseeding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\dtos\\applicationsdtos\\updatetempbarberservicelistdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|solutionrelative:dtos\\applicationsdtos\\updatetempbarberservicelistdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85B500C8-D813-4B07-B735-179FF3EB4758}|BSApi\\BSApi.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\bsapi\\controllers\\appusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85B500C8-D813-4B07-B735-179FF3EB4758}|BSApi\\BSApi.csproj|solutionrelative:bsapi\\controllers\\appusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CF0DC2A-358A-4D3B-B816-534EF7983775}|BussinesLayer\\BussinesLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\bussineslayer\\mapper\\applicationprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CF0DC2A-358A-4D3B-B816-534EF7983775}|BussinesLayer\\BussinesLayer.csproj|solutionrelative:bussineslayer\\mapper\\applicationprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\dtos\\applicationsdtos\\addtempbabrerservicelistdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|solutionrelative:dtos\\applicationsdtos\\addtempbabrerservicelistdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\dtos\\applicationsdtos\\addtempbarberservicesingledtos.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|solutionrelative:dtos\\applicationsdtos\\addtempbarberservicesingledtos.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\repositary\\customerrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|solutionrelative:repositary\\customerrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85B500C8-D813-4B07-B735-179FF3EB4758}|BSApi\\BSApi.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\bsapi\\controllers\\barberecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85B500C8-D813-4B07-B735-179FF3EB4758}|BSApi\\BSApi.csproj|solutionrelative:bsapi\\controllers\\barberecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C07757A6-60F9-459E-B66B-4AB220E90F0D}|DataLayer\\DataLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\datalayer\\entities\\ratings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C07757A6-60F9-459E-B66B-4AB220E90F0D}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\entities\\ratings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CF0DC2A-358A-4D3B-B816-534EF7983775}|BussinesLayer\\BussinesLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\bussineslayer\\mapper\\ratingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CF0DC2A-358A-4D3B-B816-534EF7983775}|BussinesLayer\\BussinesLayer.csproj|solutionrelative:bussineslayer\\mapper\\ratingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\dtos\\ratingsdtos\\addratingdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|solutionrelative:dtos\\ratingsdtos\\addratingdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{907B5983-D784-46B7-B51C-8369953BF9C9}|ValidationLayer\\ValidationLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\validationlayer\\updateratingvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{907B5983-D784-46B7-B51C-8369953BF9C9}|ValidationLayer\\ValidationLayer.csproj|solutionrelative:validationlayer\\updateratingvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{907B5983-D784-46B7-B51C-8369953BF9C9}|ValidationLayer\\ValidationLayer.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\validationlayer\\addratingvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{907B5983-D784-46B7-B51C-8369953BF9C9}|ValidationLayer\\ValidationLayer.csproj|solutionrelative:validationlayer\\addratingvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\dtos\\dtos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|solutionrelative:dtos\\dtos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\repositary\\services\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|solutionrelative:repositary\\services\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\repositary\\servicsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{187924A7-4B84-4F49-B663-4B53C4037F32}|Repositary\\Repositary.csproj|solutionrelative:repositary\\servicsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|d:\\visualstudio-projects\\projects\\barbersystem\\bsapi\\dtos\\applicationsdtos\\addapplicationdtos.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D24D5BC3-0232-44FA-94D5-5B0E72219F44}|Dtos\\Dtos.csproj|solutionrelative:dtos\\applicationsdtos\\addapplicationdtos.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +158,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,172 +166,476 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "enApplicationStatus.cs",
-              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\DataLayer\\Entities\\EnumClasses\\enApplicationStatus.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Entities\\EnumClasses\\enApplicationStatus.cs",
-              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\DataLayer\\Entities\\EnumClasses\\enApplicationStatus.cs",
-              "RelativeToolTip": "DataLayer\\Entities\\EnumClasses\\enApplicationStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T20:45:24.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AppointmentsController.cs",
-              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Controllers\\AppointmentsController.cs",
-              "RelativeDocumentMoniker": "BSApi\\Controllers\\AppointmentsController.cs",
-              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Controllers\\AppointmentsController.cs",
-              "RelativeToolTip": "BSApi\\Controllers\\AppointmentsController.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAUwEQAAAAIAAAAAAAAAA==",
+              "Title": "RatingController.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Controllers\\RatingController.cs",
+              "RelativeDocumentMoniker": "BSApi\\Controllers\\RatingController.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Controllers\\RatingController.cs",
+              "RelativeToolTip": "BSApi\\Controllers\\RatingController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwC0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:12:15.096Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppoitmentServices.cs",
-              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\AppoitmentServices.cs",
-              "RelativeDocumentMoniker": "BussinesLayer\\AppoitmentServices.cs",
-              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\AppoitmentServices.cs",
-              "RelativeToolTip": "BussinesLayer\\AppoitmentServices.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAUwEMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T16:31:27.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Appointments.cs",
-              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\DataLayer\\Entities\\Appointments.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Entities\\Appointments.cs",
-              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\DataLayer\\Entities\\Appointments.cs",
-              "RelativeToolTip": "DataLayer\\Entities\\Appointments.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAawBEAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:25:14.381Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppointmentsRepo.cs",
-              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\AppointmentsRepo.cs",
-              "RelativeDocumentMoniker": "Repositary\\AppointmentsRepo.cs",
-              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\AppointmentsRepo.cs",
-              "RelativeToolTip": "Repositary\\AppointmentsRepo.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAkwIQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:05:30.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "updateAppointmentDtos.cs",
-              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\AppointmentDtos\\updateAppointmentDtos.cs",
-              "RelativeDocumentMoniker": "Dtos\\AppointmentDtos\\updateAppointmentDtos.cs",
-              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\AppointmentDtos\\updateAppointmentDtos.cs",
-              "RelativeToolTip": "Dtos\\AppointmentDtos\\updateAppointmentDtos.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAiwBAAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:54:52.237Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "addAppointmentValidation.cs",
-              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\ValidationLayer\\addAppointmentValidation.cs",
-              "RelativeDocumentMoniker": "ValidationLayer\\addAppointmentValidation.cs",
-              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\ValidationLayer\\addAppointmentValidation.cs",
-              "RelativeToolTip": "ValidationLayer\\addAppointmentValidation.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T20:36:16.733Z",
+              "WhenOpened": "2025-11-03T14:38:29.593Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "updateAppointmentValidation.cs",
-              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\ValidationLayer\\updateAppointmentValidation.cs",
-              "RelativeDocumentMoniker": "ValidationLayer\\updateAppointmentValidation.cs",
-              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\ValidationLayer\\updateAppointmentValidation.cs",
-              "RelativeToolTip": "ValidationLayer\\updateAppointmentValidation.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAIwCcAAAAAAAAAAAAAAA==",
+              "Title": "AppointmentsController.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Controllers\\AppointmentsController.cs",
+              "RelativeDocumentMoniker": "BSApi\\Controllers\\AppointmentsController.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Controllers\\AppointmentsController.cs",
+              "RelativeToolTip": "BSApi\\Controllers\\AppointmentsController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAQwHgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T19:07:19.006Z",
+              "WhenOpened": "2025-11-03T15:39:11.659Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Program.cs",
-              "RelativeDocumentMoniker": "BSApi\\Program.cs",
-              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Program.cs",
-              "RelativeToolTip": "BSApi\\Program.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAcwDwAAAAAAAAAAAAAAA==",
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\DataLayer\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\DataLayer\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "DataLayer\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwBoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T20:14:11.079Z",
+              "WhenOpened": "2025-11-04T03:02:16.388Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AppointmentProfile.cs",
-              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\Mapper\\AppointmentProfile.cs",
-              "RelativeDocumentMoniker": "BussinesLayer\\Mapper\\AppointmentProfile.cs",
-              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\Mapper\\AppointmentProfile.cs",
-              "RelativeToolTip": "BussinesLayer\\Mapper\\AppointmentProfile.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwB8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "RatingsService.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\RatingsService.cs",
+              "RelativeDocumentMoniker": "BussinesLayer\\RatingsService.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\RatingsService.cs",
+              "RelativeToolTip": "BussinesLayer\\RatingsService.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAYwH0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T19:50:10.294Z",
+              "WhenOpened": "2025-11-02T11:21:19.08Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PeopleController.cs",
-              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Controllers\\PeopleController.cs",
-              "RelativeDocumentMoniker": "BSApi\\Controllers\\PeopleController.cs",
-              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Controllers\\PeopleController.cs",
-              "RelativeToolTip": "BSApi\\Controllers\\PeopleController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBMAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "RatingRepo.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\RatingRepo.cs",
+              "RelativeDocumentMoniker": "Repositary\\RatingRepo.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\RatingRepo.cs",
+              "RelativeToolTip": "Repositary\\RatingRepo.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwDgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:12:56.026Z",
+              "WhenOpened": "2025-11-02T10:12:40.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BarbersRepo.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\BarbersRepo.cs",
+              "RelativeDocumentMoniker": "Repositary\\BarbersRepo.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\BarbersRepo.cs",
+              "RelativeToolTip": "Repositary\\BarbersRepo.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAzwE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T15:26:15.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ServiceExtensions.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\DataLayer\\Services\\ServiceExtensions.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Services\\ServiceExtensions.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\DataLayer\\Services\\ServiceExtensions.cs",
+              "RelativeToolTip": "DataLayer\\Services\\ServiceExtensions.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:23:47.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "deleteRatingDtos.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\RatingsDtos\\deleteRatingDtos.cs",
+              "RelativeDocumentMoniker": "Dtos\\RatingsDtos\\deleteRatingDtos.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\RatingsDtos\\deleteRatingDtos.cs",
+              "RelativeToolTip": "Dtos\\RatingsDtos\\deleteRatingDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T15:42:36.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "deleteRatingValidator.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\ValidationLayer\\deleteRatingValidator.cs",
+              "RelativeDocumentMoniker": "ValidationLayer\\deleteRatingValidator.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\ValidationLayer\\deleteRatingValidator.cs",
+              "RelativeToolTip": "ValidationLayer\\deleteRatingValidator.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T14:32:13.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "BussinesServices.cs",
-              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\Services\\BussinesServices.cs",
-              "RelativeDocumentMoniker": "BussinesLayer\\Services\\BussinesServices.cs",
-              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\Services\\BussinesServices.cs",
-              "RelativeToolTip": "BussinesLayer\\Services\\BussinesServices.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwB4AAAAAAAAAAAAAAA==",
+              "Title": "BarberApplicationController.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Controllers\\BarberApplicationController.cs",
+              "RelativeDocumentMoniker": "BSApi\\Controllers\\BarberApplicationController.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Controllers\\BarberApplicationController.cs",
+              "RelativeToolTip": "BSApi\\Controllers\\BarberApplicationController.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAArwJ4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:10:46.233Z",
+              "WhenOpened": "2025-11-03T15:39:11.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TempBarberServicesRepo.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\TempBarberServicesRepo.cs",
+              "RelativeDocumentMoniker": "Repositary\\TempBarberServicesRepo.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\TempBarberServicesRepo.cs",
+              "RelativeToolTip": "Repositary\\TempBarberServicesRepo.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T11:05:35.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppoitmentServices.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\AppoitmentServices.cs",
+              "RelativeDocumentMoniker": "BussinesLayer\\AppoitmentServices.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\AppoitmentServices.cs",
+              "RelativeToolTip": "BussinesLayer\\AppoitmentServices.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAArwGUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T03:30:19.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppointmentsRepo.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\AppointmentsRepo.cs",
+              "RelativeDocumentMoniker": "Repositary\\AppointmentsRepo.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\AppointmentsRepo.cs",
+              "RelativeToolTip": "Repositary\\AppointmentsRepo.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAQwJ4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T06:27:11.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BarberAplicationRepo.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\BarberAplicationRepo.cs",
+              "RelativeDocumentMoniker": "Repositary\\BarberAplicationRepo.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\BarberAplicationRepo.cs",
+              "RelativeToolTip": "Repositary\\BarberAplicationRepo.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T13:13:11.927Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "updateFullApplicationRejectedDtos.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\updateFullApplicationRejectedDtos.cs",
+              "RelativeDocumentMoniker": "Dtos\\ApplicationsDtos\\updateFullApplicationRejectedDtos.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\updateFullApplicationRejectedDtos.cs",
+              "RelativeToolTip": "Dtos\\ApplicationsDtos\\updateFullApplicationRejectedDtos.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T11:33:58.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RejectedOrCanceledApplicarionDtos.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\RejectedOrCanceledApplicarionDtos.cs",
+              "RelativeDocumentMoniker": "Dtos\\ApplicationsDtos\\RejectedOrCanceledApplicarionDtos.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\RejectedOrCanceledApplicarionDtos.cs",
+              "RelativeToolTip": "Dtos\\ApplicationsDtos\\RejectedOrCanceledApplicarionDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T13:50:40.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "updateApplicationAcceptDto.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\updateApplicationAcceptDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\ApplicationsDtos\\updateApplicationAcceptDto.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\updateApplicationAcceptDto.cs",
+              "RelativeToolTip": "Dtos\\ApplicationsDtos\\updateApplicationAcceptDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T13:56:19.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DeleteTempBarberServiceDto.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\DeleteTempBarberServiceDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\ApplicationsDtos\\DeleteTempBarberServiceDto.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\DeleteTempBarberServiceDto.cs",
+              "RelativeToolTip": "Dtos\\ApplicationsDtos\\DeleteTempBarberServiceDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:08:38.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "JwtAuthenticationExtensions.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\Services\\Auth\\JwtAuthenticationExtensions.cs",
+              "RelativeDocumentMoniker": "BussinesLayer\\Services\\Auth\\JwtAuthenticationExtensions.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\Services\\Auth\\JwtAuthenticationExtensions.cs",
+              "RelativeToolTip": "BussinesLayer\\Services\\Auth\\JwtAuthenticationExtensions.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:24:06.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "updateTempBarberServiceListDtos.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\updateTempBarberServiceListDtos.cs",
+              "RelativeDocumentMoniker": "Dtos\\ApplicationsDtos\\updateTempBarberServiceListDtos.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\updateTempBarberServiceListDtos.cs",
+              "RelativeToolTip": "Dtos\\ApplicationsDtos\\updateTempBarberServiceListDtos.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T11:45:25.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "JwtServices.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\Services\\Jwt\\JwtServices.cs",
+              "RelativeDocumentMoniker": "BussinesLayer\\Services\\Jwt\\JwtServices.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\Services\\Jwt\\JwtServices.cs",
+              "RelativeToolTip": "BussinesLayer\\Services\\Jwt\\JwtServices.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:24:42.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "addApplicationDtos.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\addApplicationDtos.cs",
+              "RelativeDocumentMoniker": "Dtos\\ApplicationsDtos\\addApplicationDtos.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\addApplicationDtos.cs",
+              "RelativeToolTip": "Dtos\\ApplicationsDtos\\addApplicationDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T11:55:22.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DBSeeding.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\DataLayer\\Data\\DBSeeding.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Data\\DBSeeding.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\DataLayer\\Data\\DBSeeding.cs",
+              "RelativeToolTip": "DataLayer\\Data\\DBSeeding.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwB8AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T03:02:25.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ApplicationProfile.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\Mapper\\ApplicationProfile.cs",
+              "RelativeDocumentMoniker": "BussinesLayer\\Mapper\\ApplicationProfile.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\Mapper\\ApplicationProfile.cs",
+              "RelativeToolTip": "BussinesLayer\\Mapper\\ApplicationProfile.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwDQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T11:29:09.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AppUserController.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Controllers\\AppUserController.cs",
+              "RelativeDocumentMoniker": "BSApi\\Controllers\\AppUserController.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Controllers\\AppUserController.cs",
+              "RelativeToolTip": "BSApi\\Controllers\\AppUserController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAA/wHEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T05:17:31.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "addTempBabrerServiceListDtos.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\addTempBabrerServiceListDtos.cs",
+              "RelativeDocumentMoniker": "Dtos\\ApplicationsDtos\\addTempBabrerServiceListDtos.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\addTempBabrerServiceListDtos.cs",
+              "RelativeToolTip": "Dtos\\ApplicationsDtos\\addTempBabrerServiceListDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T11:18:30.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "addTempBarberServiceSingleDtos.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\addTempBarberServiceSingleDtos.cs",
+              "RelativeDocumentMoniker": "Dtos\\ApplicationsDtos\\addTempBarberServiceSingleDtos.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\ApplicationsDtos\\addTempBarberServiceSingleDtos.cs",
+              "RelativeToolTip": "Dtos\\ApplicationsDtos\\addTempBarberServiceSingleDtos.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T11:15:26.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CustomerRepo.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\CustomerRepo.cs",
+              "RelativeDocumentMoniker": "Repositary\\CustomerRepo.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\CustomerRepo.cs",
+              "RelativeToolTip": "Repositary\\CustomerRepo.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAASwDIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T03:32:13.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "BarbereController.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Controllers\\BarbereController.cs",
+              "RelativeDocumentMoniker": "BSApi\\Controllers\\BarbereController.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BSApi\\Controllers\\BarbereController.cs",
+              "RelativeToolTip": "BSApi\\Controllers\\BarbereController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAowFMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T18:10:15.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AddRatingValidator.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\ValidationLayer\\AddRatingValidator.cs",
+              "RelativeDocumentMoniker": "ValidationLayer\\AddRatingValidator.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\ValidationLayer\\AddRatingValidator.cs",
+              "RelativeToolTip": "ValidationLayer\\AddRatingValidator.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwBkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T14:27:18.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "addRatingDtos.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\RatingsDtos\\addRatingDtos.cs",
+              "RelativeDocumentMoniker": "Dtos\\RatingsDtos\\addRatingDtos.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\RatingsDtos\\addRatingDtos.cs",
+              "RelativeToolTip": "Dtos\\RatingsDtos\\addRatingDtos.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T14:25:05.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Ratings.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\DataLayer\\Entities\\Ratings.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Entities\\Ratings.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\DataLayer\\Entities\\Ratings.cs",
+              "RelativeToolTip": "DataLayer\\Entities\\Ratings.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAtwA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T13:27:49.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RatingProfile.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\Mapper\\RatingProfile.cs",
+              "RelativeDocumentMoniker": "BussinesLayer\\Mapper\\RatingProfile.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\BussinesLayer\\Mapper\\RatingProfile.cs",
+              "RelativeToolTip": "BussinesLayer\\Mapper\\RatingProfile.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T14:15:06.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "updateRatingValidator.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\ValidationLayer\\updateRatingValidator.cs",
+              "RelativeDocumentMoniker": "ValidationLayer\\updateRatingValidator.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\ValidationLayer\\updateRatingValidator.cs",
+              "RelativeToolTip": "ValidationLayer\\updateRatingValidator.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T14:36:08.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Dtos.csproj",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\Dtos.csproj",
+              "RelativeDocumentMoniker": "Dtos\\Dtos.csproj",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Dtos\\Dtos.csproj",
+              "RelativeToolTip": "Dtos\\Dtos.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-02T14:04:38.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
               "Title": "Services.cs",
               "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\Services\\Services.cs",
               "RelativeDocumentMoniker": "Repositary\\Services\\Services.cs",
               "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\Services\\Services.cs",
               "RelativeToolTip": "Repositary\\Services\\Services.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBkAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T18:10:06.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T13:54:05.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ServicsRepo.cs",
+              "DocumentMoniker": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\ServicsRepo.cs",
+              "RelativeDocumentMoniker": "Repositary\\ServicsRepo.cs",
+              "ToolTip": "D:\\VisualStudio-Projects\\Projects\\BarberSystem\\BSApi\\Repositary\\ServicsRepo.cs",
+              "RelativeToolTip": "Repositary\\ServicsRepo.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T10:12:11.832Z"
             }
           ]
         }

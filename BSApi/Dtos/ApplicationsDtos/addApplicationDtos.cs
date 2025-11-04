@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Dtos.ApplicationsDtos
 {
     public  class addApplicationDtos
     {
-        public int UserID { get; set; }
+        [JsonIgnore]
+        public int UserID { get ; set; }
         public string Shop { get; set; } = string.Empty;
         public string Location { get; set; } = string.Empty;
         public string CopyFirstName { get; set; } = string.Empty;
@@ -16,7 +18,7 @@ namespace Dtos.ApplicationsDtos
         public string CopyLastName { get; set; } = string.Empty;
         public string? CopyPhone { get; set; } = null;
 
-        public List<addTempBarberServiceDtos> addTempBarberServiceDtos { get; set; } = new List<addTempBarberServiceDtos>();
+        public List<addTempBarberServiceSingleDtos> addTempBarberServiceDtos { get; set; } = new List<addTempBarberServiceSingleDtos>();
     
     
     }

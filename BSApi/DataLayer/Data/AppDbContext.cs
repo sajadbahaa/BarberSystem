@@ -43,7 +43,6 @@ namespace DTLayer.Data
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
 
             modelBuilder.ApplyConfiguration(new AppUserConfiguration());
-
         }
         public DbSet<People> People { get; set; }   
         public DbSet<Speclitys> Speclitys { get; set; }
@@ -56,6 +55,6 @@ namespace DTLayer.Data
         public DbSet<BarberServices> barberServices { get; set; }
         public DbSet<Customers> Customers { get; set; }
         public DbSet<Appointments> Appointments { get; set; }
-
+        public  DbSet<Ratings> Ratings { get; set;}
     }
 }

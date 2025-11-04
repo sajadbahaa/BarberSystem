@@ -69,6 +69,27 @@ namespace Repositary
                 .ToListAsync();
             return result;
         }
+        public async Task<bool> updateRatingAsync(int barberID,decimal rate,bool delete = false)
+        {
+            var res = await _dbSet.Where(x => x.BarberID == barberID)
+    .ExecuteUpdateAsync
+    (x => x.SetProperty(i => i.Rating,
+  i => !delete ? rate : i.Rating - rate
+    ));
+            return res > 0;
+}
+
+
+        public async Task<bool> IsAppointmentOwnedByBarberAsync(int userId, int appointmentId)
+        {
+            // AsNoTracking: لأننا نتحقق فقط، ما نحتاج تتبع الكيانات
+            return await _context.barbers
+                .AsNoTracking()
+                .Where(b => b.UserID == userId) // فلترة على المستخدم الحالي
+                .AnyAsync(b => b.BarberServices
+                                .Any(bs => bs.appointments
+                                             .Any(a => a.AppointmentID == appointmentId)));
+        }
 
 
         // un secure support Sql Injuction .
@@ -99,4 +120,4 @@ namespace Repositary
 
 
     }
-    }
+}
