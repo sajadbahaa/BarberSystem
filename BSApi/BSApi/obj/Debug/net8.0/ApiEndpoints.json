@@ -73,6 +73,27 @@
   },
   {
     "ContainingType": "BSApi.Controllers.AppointmentsController",
+    "Method": "GetPaged",
+    "RelativePath": "api/Appointments/GetPaged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.AppointmentsController",
     "Method": "UpdateAsync",
     "RelativePath": "api/Appointments/Update",
     "HttpMethod": "PUT",
@@ -329,6 +350,27 @@
   },
   {
     "ContainingType": "WebAPI.Controllers.AppUserController",
+    "Method": "GetPaged",
+    "RelativePath": "api/AppUser/GetPaged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.AppUserController",
     "Method": "Login",
     "RelativePath": "api/AppUser/login",
     "HttpMethod": "POST",
@@ -537,6 +579,27 @@
   },
   {
     "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "GetPaged",
+    "RelativePath": "api/BarberApplication/GetPaged/GetPaged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
     "Method": "GetTempPendingServicesByTempIDAsync",
     "RelativePath": "api/BarberApplication/GetTempPendingServicesByTempID/GetTempPendingServicesByTempID/{id}",
     "HttpMethod": "GET",
@@ -710,6 +773,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BSApi.Controllers.CustomerController",
+    "Method": "GetPaged",
+    "RelativePath": "api/Customer/GetPaged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BSApi.Controllers.RatingController",
     "Method": "AddRatingAsync",
     "RelativePath": "api/Rating/AddRating",
@@ -780,6 +864,27 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.RatingController",
+    "Method": "GetPaged",
+    "RelativePath": "api/Rating/GetPaged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "BSApi.Controllers.RatingController",
@@ -909,6 +1014,27 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarbersController",
+    "Method": "GetPaged",
+    "RelativePath": "Barbers/GetPaged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -1081,6 +1207,27 @@
   },
   {
     "ContainingType": "BSApi.Controllers.PeopleController",
+    "Method": "GetPaged",
+    "RelativePath": "People/GetPaged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.PeopleController",
     "Method": "UpdateAsync",
     "RelativePath": "People/Update",
     "HttpMethod": "PUT",
@@ -1159,6 +1306,27 @@
         "Name": "id",
         "Type": "System.Int16",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.ServicesController",
+    "Method": "GetPaged",
+    "RelativePath": "Services/GetPaged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -1300,6 +1468,27 @@
       {
         "Name": "speclityName",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.SpeclitController",
+    "Method": "GetPaged",
+    "RelativePath": "Speclit/GetPaged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],

@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using DataLayer.Entities;
+using Dtos.AppointmentDtos;
 using Dtos.PeopleDtos;
+using Microsoft.EntityFrameworkCore;
 using Repositary;
 using System.Runtime.InteropServices;
 
@@ -15,7 +18,14 @@ namespace BussinesLayer
             _repo = repo;
             _mapper = mapper;
         }
+        public async Task<List<FindPeopleDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        {
+            return await _repo.GetAllWithPagination(pageNumber, pageSize) // IQueryable<T>
+                .ProjectTo<FindPeopleDtos>(_mapper.ConfigurationProvider) // Project to DTO
+                .ToListAsync();
 
+            // تنفيذ الاستعلام داخل SQL
+        }
         public async Task<FindPeopleDtos?> FindByIDAsync(int ID)
         {
             return  _mapper.Map<FindPeopleDtos>( await _repo.GetByIdAsync(ID));

@@ -1,6 +1,10 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using DataLayer.Entities;
+using Dtos.AppointmentDtos;
+using Dtos.PeopleDtos;
 using Dtos.RatingsDtos;
+using Microsoft.EntityFrameworkCore;
 using Repositary;
 using System;
 using System.Collections.Generic;
@@ -124,7 +128,19 @@ namespace BussinesLayer
             await _repo.CommitAsync();
             return true;
         }
+        //public async Task<List<findRatingDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        //{
+        //    return _mapper.Map<List<findRatingDtos>>(await _repo.GetAllWithPaginationAsync(pageNumber, pageSize));
+        //}
 
+        public async Task<List<findRatingDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        {
+            return await _repo.GetAllWithPagination(pageNumber, pageSize) // IQueryable<T>
+                .ProjectTo<findRatingDtos>(_mapper.ConfigurationProvider) // Project to DTO
+                .ToListAsync();
+
+            // تنفيذ الاستعلام داخل SQL
+        }
         public async Task<findRatingDtos?> GetRatingByIDAsync(int RatingID)
         {
             return _mapper.Map<findRatingDtos>(await _repo.GetByIdAsync(RatingID));

@@ -22,7 +22,7 @@ namespace DataLayer.Entities
         public BarberApplications ? BarberApplications { get; set; }
         public People()
         {
-            PersonID = 0;
+      
             FirstName = string.Empty;
             LastName = string.Empty;
             SecondName = string.Empty;

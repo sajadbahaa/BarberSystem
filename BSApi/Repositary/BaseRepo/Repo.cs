@@ -139,7 +139,15 @@ namespace Repositary.BaseRepo
 
         }
 
-   
+        public virtual IQueryable<T> GetAllWithPagination(int pageNumber, int pageSize)
+        {
+            return _dbSet
+                .AsNoTracking()
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize);
+        }
+
+
 
 
     }

@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using DataLayer.Entities;
+using Dtos.AppointmentDtos;
 using Dtos.PeopleDtos;
 using Dtos.Services;
 using Dtos.SpeclisysDtos;
@@ -33,6 +35,14 @@ namespace BussinesLayer
         public async Task<findSpecliystDtos?> FindByIDAsync(short ID)
         {
             return _mapper.Map<findSpecliystDtos>(await _repo.GetByIdAsync(ID));
+        }
+        public async Task<List<findSpecliystDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        {
+            return await _repo.GetAllWithPagination(pageNumber, pageSize) // IQueryable<T>
+                .ProjectTo<findSpecliystDtos>(_mapper.ConfigurationProvider) // Project to DTO
+                .ToListAsync();
+
+            // تنفيذ الاستعلام داخل SQL
         }
         public async Task<List<findSpecliystDtos>?> FindAllSpeclistAsync()
         {

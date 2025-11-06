@@ -1,7 +1,11 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using DataLayer.Entities;
+using Dtos.AppointmentDtos;
+using Dtos.RatingsDtos;
 using Dtos.Services;
 using Dtos.SpeclisysDtos;
+using Microsoft.EntityFrameworkCore;
 using Repositary;
 
 namespace BussinesLayer
@@ -23,7 +27,19 @@ namespace BussinesLayer
         {
             return _mapper.Map<List<findServicesDtos>>(await _repo.GetAllAsync());
         }
+        //public async Task<List<findServicesDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        //{
+        //    return _mapper.Map<List<findServicesDtos>>(await _repo.GetAllWithPaginationAsync(pageNumber, pageSize));
+        //}
 
+        public async Task<List<findServicesDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        {
+            return await _repo.GetAllWithPagination(pageNumber, pageSize) // IQueryable<T>
+                .ProjectTo<findServicesDtos>(_mapper.ConfigurationProvider) // Project to DTO
+                .ToListAsync();
+
+            // تنفيذ الاستعلام داخل SQL
+        }
         public async Task<List<findServicesDetialsDtos>?> FindAllServicesDetilasAsync()
         {
             var query = await _repo.GetAllFilterAsync();

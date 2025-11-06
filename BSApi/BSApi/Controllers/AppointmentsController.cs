@@ -119,5 +119,16 @@ namespace BSApi.Controllers
             if (!result) return BadRequest("Update failed");
             return Ok(result);
         }
+
+        [HttpGet("[Action]")]
+        public async Task<IActionResult> GetPaged([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
+        {
+            var result = await _service.GetAllWithPaginationAsync(pageNumber, pageSize);
+
+            if (result == null || result.Count == 0)
+                return NotFound(new { message = "ماكو بيانات للعرض" });
+
+            return Ok(result);
+        }
     }
 }

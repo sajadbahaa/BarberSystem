@@ -36,9 +36,8 @@ namespace BussinesLayer.Mapper
              .ForMember(x => x.CustomerID, opt => opt.Ignore())
              .ForMember(x => x.UserID, opt => opt.MapFrom(x => x.UserID))
              .ForMember(x => x.PersonID, opt => opt.MapFrom(x => x.personID))
-             .ForMember(x => x.person, opt => opt.MapFrom(x => x.peopleDtos))
              .ForMember(x => x.user, opt => opt.Ignore());
-             ;
+             ; 
             ;
 
 

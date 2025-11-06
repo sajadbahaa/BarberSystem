@@ -1,6 +1,10 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using DataLayer.Entities;
 using Dtos.ApplicationsDtos;
+using Dtos.AppointmentDtos;
+using Dtos.BarbersDtos;
+using Microsoft.EntityFrameworkCore;
 using Repositary;
 using System;
 using static System.Net.Mime.MediaTypeNames;
@@ -381,12 +385,24 @@ Duration = x.Duration
         //    throw new NotImplementedException();
         //}
 
-        
 
 
 
 
 
+        //public async Task<List<findApplicationDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        //{
+        //    return _mapper.Map<List<findApplicationDtos>>(await _repo.GetAllWithPaginationAsync(pageNumber, pageSize));
+
+        //}
+
+
+        public async Task<List<findApplicationDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        {
+            return await _repo.GetAllWithPagination(pageNumber, pageSize) // IQueryable<T>
+                .ProjectTo<findApplicationDtos>(_mapper.ConfigurationProvider) // Project to DTO
+                .ToListAsync(); // تنفيذ الاستعلام داخل SQL
+        }
 
 
 

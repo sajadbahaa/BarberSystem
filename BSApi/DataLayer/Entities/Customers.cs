@@ -18,7 +18,6 @@ namespace DataLayer.Entities
         public Customers()
         {
             CustomerID = 0;
-            PersonID = 0;
         }
     }
 }

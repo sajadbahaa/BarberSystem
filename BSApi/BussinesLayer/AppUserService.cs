@@ -1,6 +1,10 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using DataLayer.Entities;
+using Dtos.ApplicationsDtos;
+using Dtos.AppointmentDtos;
 using Dtos.UsersDtos;
+using Microsoft.EntityFrameworkCore;
 using Repositary;
 using System;
 using System.Collections.Generic;
@@ -21,6 +25,21 @@ namespace BussinesLayer
             _mapper = mapper;
            
         }
+
+        //public async Task<List<findUserDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        //{
+        //    return _mapper.Map<List<findUserDtos>>(await _repo.GetAllWithPaginationAsync(pageNumber, pageSize));
+        //}
+
+        public async Task<List<findUserDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        {
+            return await _repo.GetAllWithPagination(pageNumber, pageSize) // IQueryable<T>
+                .ProjectTo<findUserDtos>(_mapper.ConfigurationProvider) // Project to DTO
+                .ToListAsync(); 
+            
+            // تنفيذ الاستعلام داخل SQL
+        }
+
 
         // find UserInfoByID
         public async Task<findUserDtos?> FindUserByIDAsync(int userID)

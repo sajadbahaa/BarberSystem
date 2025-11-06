@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using DataLayer.Entities;
+using Dtos.AppointmentDtos;
 using Dtos.BarbersDtos;
 using Dtos.CustomerDtos;
 using Microsoft.EntityFrameworkCore;
@@ -33,6 +35,22 @@ namespace BussinesLayer
         {
             return _mapper.Map<findCustomerDtos>(await _repo.GetByIdAsync(id: BarberID));
         }
+
+        //public async Task<List<findCustomerDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        //{
+        //    await _repo.GetAllWithPagination(pageNumber, pageSize)
+        //        .ProjectTo<List<findCustomerDtos>>(_mapper.ConfigurationProvider)
+        //        .ToListAsync();
+        //        ;
+        //    //return _mapper.ProjectTo<List<findCustomerDtos>>( );
+        //}
+        public async Task<List<findCustomerDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        {
+            return await _repo.GetAllWithPagination(pageNumber, pageSize) // IQueryable<T>
+                .ProjectTo<findCustomerDtos>(_mapper.ConfigurationProvider) // Project to DTO
+                .ToListAsync(); // تنفيذ الاستعلام داخل SQL
+        }
+
         public async Task<List<findCustomerDtos>?> GetAllCustomersAsync()
         {
             return _mapper.Map<List<findCustomerDtos>>(await _repo.GetAllFilterAsync());

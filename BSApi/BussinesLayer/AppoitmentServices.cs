@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using DataLayer.Entities;
 using DataLayer.Entities.EnumClasses;
 using Dtos.AppointmentDtos;
+using Dtos.UsersDtos;
 using Microsoft.EntityFrameworkCore;
 using Repositary;
 using System;
@@ -101,6 +103,19 @@ namespace BussinesLayer
             return await _repo.UpdateAppointmentToCanceledAsync(AppointmentID);
         }
 
+        //public  async Task<List<findAppointmentDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        //{
+        //    return _mapper.Map<List<findAppointmentDtos>>(await _repo.GetAllWithPaginationAsync(pageNumber,pageSize));
+        //}
+
+        public async Task<List<findAppointmentDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        {
+            return await _repo.GetAllWithPagination(pageNumber, pageSize) // IQueryable<T>
+                .ProjectTo<findAppointmentDtos>(_mapper.ConfigurationProvider) // Project to DTO
+                .ToListAsync();
+
+            // تنفيذ الاستعلام داخل SQL
+        }
 
     }
 }
