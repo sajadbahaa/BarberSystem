@@ -147,7 +147,10 @@ namespace Repositary.BaseRepo
                 .Take(pageSize);
         }
 
-
+        public virtual IQueryable<T> GetByID()
+        {
+            return _dbSet.AsNoTracking();
+        }
 
 
     }
