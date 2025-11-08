@@ -23,6 +23,15 @@ namespace WebAPI.Controllers
             _jwtServices = jwtServices;
         }
 
+        [HttpGet("[action]/{id:int}")]
+        public async Task<IActionResult> FindByIDV1Async(int id)
+        {
+            var person = await _service.FindByIDV1Async(id);
+            if (person == null)
+                return NotFound($"entity ID {id} not found.");
+
+            return Ok(person);
+        }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDtos dto)

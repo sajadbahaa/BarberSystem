@@ -79,6 +79,16 @@ namespace BSApi.Controllers
             return result ? Ok("temp barber updated successfully.") : BadRequest("Failed to update temp barber.");
         }
 
+        [HttpGet("[action]/{id:int}")]
+        public async Task<IActionResult> FindByIDV1Async(int id)
+        {
+            var person = await _service.FindByIDV1Async(id);
+            if (person == null)
+                return NotFound($"entity ID {id} not found.");
+
+            return Ok(person);
+        }
+
 
         [Authorize(Roles = "PendingBarber")]
         [HttpDelete("[Action]")]

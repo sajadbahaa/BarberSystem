@@ -73,6 +73,22 @@
   },
   {
     "ContainingType": "BSApi.Controllers.AppointmentsController",
+    "Method": "FindByIDV1Async",
+    "RelativePath": "api/Appointments/FindByIDV1/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.AppointmentsController",
     "Method": "GetPaged",
     "RelativePath": "api/Appointments/GetPaged",
     "HttpMethod": "GET",
@@ -249,6 +265,22 @@
     "Method": "DeleteAsync",
     "RelativePath": "api/AppUser/Delete/{id}",
     "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.AppUserController",
+    "Method": "FindByIDV1Async",
+    "RelativePath": "api/AppUser/FindByIDV1/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -460,6 +492,22 @@
       {
         "Name": "dto",
         "Type": "Dtos.ApplicationsDtos.RejectedOrCanceledApplicarionDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarberApplicationController",
+    "Method": "FindByIDV1Async",
+    "RelativePath": "api/BarberApplication/FindByIDV1/FindByIDV1/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -774,6 +822,22 @@
   },
   {
     "ContainingType": "BSApi.Controllers.CustomerController",
+    "Method": "FindByIDV1Async",
+    "RelativePath": "api/Customer/FindByIDV1/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.CustomerController",
     "Method": "GetPaged",
     "RelativePath": "api/Customer/GetPaged",
     "HttpMethod": "GET",
@@ -844,6 +908,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "BSApi.Controllers.RatingController",
+    "Method": "FindByIDV1Async",
+    "RelativePath": "api/Rating/FindByIDV1/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "BSApi.Controllers.RatingController",
@@ -974,6 +1054,22 @@
     "ContainingType": "BSApi.Controllers.BarbersController",
     "Method": "FindByIDAsync",
     "RelativePath": "Barbers/FindByID/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.BarbersController",
+    "Method": "FindByIDV1Async",
+    "RelativePath": "Barbers/FindByIDV1/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -1165,6 +1261,22 @@
   },
   {
     "ContainingType": "BSApi.Controllers.PeopleController",
+    "Method": "FindByIDV1Async",
+    "RelativePath": "People/FindByIDV1/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.PeopleController",
     "Method": "FindByNameAsync",
     "RelativePath": "People/FindByName",
     "HttpMethod": "GET",
@@ -1312,6 +1424,22 @@
   },
   {
     "ContainingType": "BSApi.Controllers.ServicesController",
+    "Method": "FindByIDV1Async",
+    "RelativePath": "Services/FindByIDV1",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int16",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.ServicesController",
     "Method": "GetPaged",
     "RelativePath": "Services/GetPaged",
     "HttpMethod": "GET",
@@ -1453,6 +1581,22 @@
         "Name": "id",
         "Type": "System.Int16",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BSApi.Controllers.SpeclitController",
+    "Method": "FindByIDV1Async",
+    "RelativePath": "Speclit/FindByIDV1",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int16",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

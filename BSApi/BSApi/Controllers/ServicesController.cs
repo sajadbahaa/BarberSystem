@@ -72,6 +72,16 @@ namespace BSApi.Controllers
             return Ok("ActivatedSuccess");
         }
 
+        [HttpGet("[action]")]
+        public async Task<IActionResult> FindByIDV1Async(short id)
+        {
+            var person = await _service.FindByIDV1Async(id);
+            if (person == null)
+                return NotFound($"entity ID {id} not found.");
+
+            return Ok(person);
+        }
+
         // =================== DELETE ===================
 
         [HttpDelete("[action]/{id:int}")]

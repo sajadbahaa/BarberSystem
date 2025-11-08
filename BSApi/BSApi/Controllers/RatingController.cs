@@ -63,6 +63,17 @@ namespace BSApi.Controllers
             return Ok(result);
         }
 
+        [HttpGet("[action]/{id:int}")]
+        public async Task<IActionResult> FindByIDV1Async(int id)
+        {
+            var person = await _service.FindByIDV1Async(id);
+            if (person == null)
+                return NotFound($"entity ID {id} not found.");
+
+            return Ok(person);
+        }
+
+
         // ✅ الحصول على كل التقييمات
         [HttpGet]
         [Route("[action]")]
