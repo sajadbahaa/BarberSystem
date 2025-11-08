@@ -41,7 +41,13 @@ namespace BussinesLayer
             return _mapper.Map<List<findAppointmentDtos>>(await _repo.GetAllAsync());
         }
 
-    public async Task<int> AddAsync(addAppointmentDtos dto,int userID)
+        public async Task<findAppointmentDtos?> FindByIDV1Async(int ID)
+        {
+            return await _repo.GetByID().Where(x => x.AppointmentID == ID)
+                .ProjectTo<findAppointmentDtos?>(_mapper.ConfigurationProvider)
+                .SingleOrDefaultAsync();
+        }
+        public async Task<int> AddAsync(addAppointmentDtos dto,int userID)
         {
             // check user id is it a customer .
 

@@ -4,6 +4,7 @@ using DataLayer.Entities;
 using Dtos.AppointmentDtos;
 using Dtos.PeopleDtos;
 using Dtos.RatingsDtos;
+using Dtos.Services;
 using Microsoft.EntityFrameworkCore;
 using Repositary;
 using System;
@@ -140,6 +141,12 @@ namespace BussinesLayer
                 .ToListAsync();
 
             // تنفيذ الاستعلام داخل SQL
+        }
+        public async Task<findRatingDtos?> FindByIDV1Async(int ID)
+        {
+            return await _repo.GetByID().Where(x => x.RatingID == ID)
+                .ProjectTo<findRatingDtos?>(_mapper.ConfigurationProvider)
+                .SingleOrDefaultAsync();
         }
         public async Task<findRatingDtos?> GetRatingByIDAsync(int RatingID)
         {

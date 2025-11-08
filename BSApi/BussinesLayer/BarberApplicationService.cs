@@ -404,7 +404,12 @@ Duration = x.Duration
                 .ToListAsync(); // تنفيذ الاستعلام داخل SQL
         }
 
-
+        public async Task<findApplicationDtos?> FindByIDV1Async(int ID)
+        {
+            return await _repo.GetByID().Where(x => x.ApplicationID == ID)
+                .ProjectTo<findApplicationDtos?>(_mapper.ConfigurationProvider)
+                .SingleOrDefaultAsync();
+        }
 
 
     }

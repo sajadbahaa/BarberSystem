@@ -44,6 +44,14 @@ namespace BussinesLayer
 
             // تنفيذ الاستعلام داخل SQL
         }
+
+        public async Task<findSpecliystDtos?> FindByIDV1Async(short ID)
+        {
+            return await _repo.GetByID().Where(x => x.SpecilityID== ID)
+                .ProjectTo<findSpecliystDtos?>(_mapper.ConfigurationProvider)
+                .SingleOrDefaultAsync();
+        }
+
         public async Task<List<findSpecliystDtos>?> FindAllSpeclistAsync()
         {
             return _mapper.Map<List<findSpecliystDtos>>(await _repo.GetAllAsync());

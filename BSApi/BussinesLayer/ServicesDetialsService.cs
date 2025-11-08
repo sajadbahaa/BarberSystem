@@ -40,6 +40,14 @@ namespace BussinesLayer
 
             // تنفيذ الاستعلام داخل SQL
         }
+
+        public async Task<findServicesDtos?> FindByIDV1Async(short ID)
+        {
+            return await _repo.GetByID().Where(x => x.ServiceID== ID)
+                .ProjectTo<findServicesDtos?>(_mapper.ConfigurationProvider)
+                .SingleOrDefaultAsync();
+        }
+
         public async Task<List<findServicesDetialsDtos>?> FindAllServicesDetilasAsync()
         {
             var query = await _repo.GetAllFilterAsync();

@@ -18,6 +18,13 @@ namespace BussinesLayer
             _repo = repo;
             _mapper = mapper;
         }
+        public async Task<FindPeopleDtos?> FindByIDV1Async(int ID)
+        {
+            return await _repo.GetByID().Where(x=>x.PersonID==ID)
+                .ProjectTo<FindPeopleDtos?>(_mapper.ConfigurationProvider)
+                .SingleOrDefaultAsync(); 
+        }
+
         public async Task<List<FindPeopleDtos>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
         {
             return await _repo.GetAllWithPagination(pageNumber, pageSize) // IQueryable<T>

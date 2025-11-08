@@ -62,6 +62,12 @@ namespace BussinesLayer
                 .ToListAsync(); // تنفيذ الاستعلام داخل SQL
         }
 
+        public async Task<findBarberServiceDto?> FindByIDV1Async(int ID)
+        {
+            return await _repo.GetByID().Where(x => x.BarberServiceID == ID)
+                .ProjectTo<findBarberServiceDto?>(_mapper.ConfigurationProvider)
+                .SingleOrDefaultAsync();
+        }
 
     }
 }
